@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useEffect, useState } from "react";
 import {
   Sparkles,
   Ticket,
@@ -7,12 +8,16 @@ import {
   Youtube,
   ExternalLink,
   User,
+  Menu,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-square.jpg";
 
 function Nav() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const links = [
     { id: "about", label: "About", href: "/#about" },
     { id: "artists", label: "Artists", href: "/artists" },
@@ -21,40 +26,126 @@ function Nav() {
     { id: "tickets", label: "Tickets", href: "/#tickets" },
     { id: "hotels", label: "Hotels", href: "/#hotels" },
     { id: "location", label: "Location", href: "/#location" },
-  ] as const;
+  ];
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="mt-3 rounded-2xl border border-border/70 bg-card/50 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-card/40">
-          <div className="flex items-center justify-between gap-3 px-3 py-2 sm:px-4">
-            <Link
-              href="/"
-              className="group inline-flex items-center gap-2 rounded-xl px-2 py-2"
-              data-testid="link-home"
-            >
-              <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-b from-[hsl(var(--primary)/0.24)] to-[hsl(var(--primary)/0.06)] ring-1 ring-[hsl(var(--primary)/0.35)]">
-                <Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" strokeWidth={2} />
-              </span>
-              <div className="hidden sm:block">
-                <div className="font-display text-sm leading-none tracking-tight">
-                  Lago Latino
+    <>
+      <div className="fixed inset-x-0 top-0 z-50">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+          <div className="mt-3 rounded-2xl border border-border/70 bg-card/50 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-card/40">
+            <div className="flex items-center justify-between gap-3 px-3 py-2 sm:px-4">
+              <Link
+                href="/"
+                className="group inline-flex items-center gap-2 rounded-xl px-2 py-2"
+                data-testid="link-home"
+              >
+                <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-b from-[hsl(var(--primary)/0.24)] to-[hsl(var(--primary)/0.06)] ring-1 ring-[hsl(var(--primary)/0.35)]">
+                  <Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" strokeWidth={2} />
+                </span>
+                <div className="hidden sm:block">
+                  <div className="font-display text-sm leading-none tracking-tight">
+                    Lago Latino
+                  </div>
+                  <div className="mt-0.5 text-xs text-muted-foreground">Ioannina • 2026</div>
                 </div>
-                <div className="mt-0.5 text-xs text-muted-foreground">Ioannina • 2026</div>
-              </div>
-            </Link>
+              </Link>
 
-            <div className="hidden items-center gap-1 md:flex">
+              <div className="hidden items-center gap-1 md:flex">
+                {links.map((l) => (
+                  l.href.startsWith("/") && !l.href.includes("#") ? (
+                    <Link
+                      key={l.id}
+                      href={l.href}
+                      className={cn(
+                        "rounded-xl px-3 py-2 text-xs font-semibold transition hover:bg-white/5 hover:text-foreground",
+                        l.id === "artists" ? "text-foreground" : "text-muted-foreground"
+                      )}
+                      data-testid={`link-nav-${l.id}`}
+                    >
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={l.id}
+                      href={l.href}
+                      className="rounded-xl px-3 py-2 text-xs font-semibold text-muted-foreground transition hover:bg-white/5 hover:text-foreground"
+                      data-testid={`link-nav-${l.id}`}
+                    >
+                      {l.label}
+                    </a>
+                  )
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer" data-testid="link-nav-tickets" className="hidden md:block">
+                  <Button
+                    size="sm"
+                    className="rounded-xl"
+                    data-testid="button-nav-tickets"
+                  >
+                    <Ticket className="mr-2 h-4 w-4" />
+                    Get Tickets
+                  </Button>
+                </a>
+                <button
+                  type="button"
+                  className="grid h-10 w-10 place-items-center rounded-xl text-foreground transition hover:bg-white/5 md:hidden"
+                  onClick={() => setMobileMenuOpen(true)}
+                  aria-label="Open menu"
+                  data-testid="button-mobile-menu-open"
+                >
+                  <Menu className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[60] md:hidden">
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            data-testid="mobile-menu-backdrop"
+          />
+          <div className="absolute right-0 top-0 h-full w-72 border-l border-border/70 bg-background/95 shadow-2xl backdrop-blur-lg">
+            <div className="flex items-center justify-between border-b border-border/70 px-4 py-4">
+              <span className="font-display text-sm font-semibold">Menu</span>
+              <button
+                type="button"
+                className="grid h-9 w-9 place-items-center rounded-xl text-foreground transition hover:bg-white/5"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+                data-testid="button-mobile-menu-close"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <nav className="flex flex-col gap-1 p-4">
               {links.map((l) => (
                 l.href.startsWith("/") && !l.href.includes("#") ? (
                   <Link
                     key={l.id}
                     href={l.href}
                     className={cn(
-                      "rounded-xl px-3 py-2 text-xs font-semibold transition hover:bg-white/5 hover:text-foreground",
+                      "rounded-xl px-4 py-3 text-sm font-semibold transition hover:bg-white/5 hover:text-foreground",
                       l.id === "artists" ? "text-foreground" : "text-muted-foreground"
                     )}
-                    data-testid={`link-nav-${l.id}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    data-testid={`link-mobile-${l.id}`}
                   >
                     {l.label}
                   </Link>
@@ -62,22 +153,24 @@ function Nav() {
                   <a
                     key={l.id}
                     href={l.href}
-                    className="rounded-xl px-3 py-2 text-xs font-semibold text-muted-foreground transition hover:bg-white/5 hover:text-foreground"
-                    data-testid={`link-nav-${l.id}`}
+                    className="rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground transition hover:bg-white/5 hover:text-foreground"
+                    onClick={() => setMobileMenuOpen(false)}
+                    data-testid={`link-mobile-${l.id}`}
                   >
                     {l.label}
                   </a>
                 )
               ))}
-            </div>
-
-            <div className="flex items-center gap-2">
-              <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer" data-testid="link-nav-tickets">
-                <Button
-                  size="sm"
-                  className="rounded-xl"
-                  data-testid="button-nav-tickets"
-                >
+            </nav>
+            <div className="absolute bottom-0 left-0 right-0 border-t border-border/70 p-4">
+              <a
+                href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Button className="w-full rounded-xl" data-testid="button-mobile-tickets">
                   <Ticket className="mr-2 h-4 w-4" />
                   Get Tickets
                 </Button>
@@ -85,8 +178,8 @@ function Nav() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
