@@ -163,7 +163,7 @@ function Nav() {
             </div>
 
             <div className="flex items-center gap-2">
-              <a href="#tickets" data-testid="link-nav-tickets">
+              <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer" data-testid="link-nav-tickets">
                 <Button
                   size="sm"
                   className="rounded-xl"
@@ -316,11 +316,6 @@ export default function FestivalLanding() {
     };
   }, [lightboxOpen]);
 
-  const onGetTickets = () => {
-    const el = document.getElementById("tickets");
-    el?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-  };
-
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
       <Nav />
@@ -373,15 +368,16 @@ export default function FestivalLanding() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button
-                size="lg"
-                className="rounded-2xl px-6"
-                onClick={onGetTickets}
-                data-testid="button-hero-tickets"
-              >
-                <Ticket className="mr-2 h-4 w-4" />
-                Get Tickets
-              </Button>
+              <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="rounded-2xl px-6"
+                  data-testid="button-hero-tickets"
+                >
+                  <Ticket className="mr-2 h-4 w-4" />
+                  Get Tickets
+                </Button>
+              </a>
               <a
                 href="#location"
                 className="inline-flex items-center justify-center rounded-2xl border border-border/70 bg-card/40 px-6 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-white/5"
@@ -952,7 +948,9 @@ export default function FestivalLanding() {
               © {new Date().getFullYear()} Lago Latino Festival. All rights reserved.
             </div>
             <a
-              href="#tickets"
+              href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[hsl(var(--primary))] hover:underline"
               data-testid="link-footer-tickets"
             >
@@ -1039,7 +1037,7 @@ function TicketCard({
         ))}
       </ul>
 
-      <a href="#tickets">
+      <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer">
         <Button
           size="lg"
           className={cn(
