@@ -14,12 +14,15 @@ import {
   Facebook,
   Youtube,
   ExternalLink,
+  X,
+  Expand,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-square.jpg";
+import fullPoster from "@assets/poster-up.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -291,12 +294,27 @@ function TimelineItem({
 
 export default function FestivalLanding() {
   const reduceMotion = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const heroRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+    };
+    if (lightboxOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
+  }, [lightboxOpen]);
 
   const onGetTickets = () => {
     const el = document.getElementById("tickets");
@@ -474,8 +492,65 @@ export default function FestivalLanding() {
             </div>
           </Card>
         </div>
+
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={() => setLightboxOpen(true)}
+            className="group relative overflow-hidden rounded-2xl border-2 border-[hsl(var(--primary)/0.5)] bg-card/60 p-2 shadow-lg transition hover:-translate-y-1 hover:border-[hsl(var(--primary))] hover:shadow-xl"
+            data-testid="button-view-poster"
+          >
+            <img
+              src={fullPoster}
+              alt="Festival Poster"
+              className="h-auto w-[200px] rounded-xl object-cover sm:w-[240px]"
+            />
+            <div className="absolute inset-0 flex items-center justify-center rounded-xl bg-black/40 opacity-0 transition group-hover:opacity-100">
+              <div className="flex items-center gap-2 rounded-full bg-[hsl(var(--primary))] px-4 py-2 text-sm font-semibold text-[hsl(var(--primary-foreground))]">
+                <Expand className="h-4 w-4" />
+                View Poster
+              </div>
+            </div>
+          </button>
+        </div>
       </Section>
 
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center"
+          onClick={() => setLightboxOpen(false)}
+          data-testid="lightbox-backdrop"
+        >
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="absolute inset-0 bg-black/90"
+          />
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: [0.2, 0.9, 0.2, 1] }}
+            className="relative z-10 max-h-[90vh] max-w-[90vw]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={fullPoster}
+              alt="Festival Poster Full"
+              className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
+              data-testid="img-lightbox-poster"
+            />
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="absolute -right-3 -top-3 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white backdrop-blur transition hover:bg-white/20"
+              data-testid="button-lightbox-close"
+              aria-label="Close lightbox"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </motion.div>
+        </div>
+      )}
 
       {/* SCHEDULE */}
       <Section
