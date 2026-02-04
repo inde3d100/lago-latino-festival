@@ -5,11 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import FestivalLanding from "./pages/festival-landing";
+import Artists from "./pages/artists";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={FestivalLanding} />
+      <Route path="/artists" component={Artists} />
       <Route component={NotFound} />
     </Switch>
   );

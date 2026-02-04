@@ -115,7 +115,7 @@ function Section({
 }
 
 function Nav() {
-  const links = useMemo(
+  const sectionLinks = useMemo(
     () =>
       [
         { id: "about", label: "About" },
@@ -150,7 +150,21 @@ function Nav() {
             </a>
 
             <div className="hidden items-center gap-1 md:flex">
-              {links.map((l) => (
+              <a
+                href="#about"
+                className="rounded-xl px-3 py-2 text-xs font-semibold text-muted-foreground transition hover:bg-white/5 hover:text-foreground"
+                data-testid="link-nav-about"
+              >
+                About
+              </a>
+              <a
+                href="/artists"
+                className="rounded-xl px-3 py-2 text-xs font-semibold text-muted-foreground transition hover:bg-white/5 hover:text-foreground"
+                data-testid="link-nav-artists"
+              >
+                Artists
+              </a>
+              {sectionLinks.slice(1).map((l) => (
                 <a
                   key={l.id}
                   href={`#${l.id}`}
