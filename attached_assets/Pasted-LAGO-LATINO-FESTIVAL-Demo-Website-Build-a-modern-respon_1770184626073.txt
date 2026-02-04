@@ -1,0 +1,39 @@
+LAGO LATINO FESTIVAL — Demo Website
+
+Build a modern, responsive single-page website for a salsa dance festival. I'm attaching the official poster — extract the color palette, typography style, and visual vibe from it.
+
+ EVENT INFO:
+
+• Name: LAGO LATINO FESTIVAL
+• Dates: March 13-15, 2026 (Friday-Sunday)
+• Venue: Epirus Palace Hotel Congress & Spa 5*, Ioannina, Greece
+• Dance halls: 850m² + 350m² ballrooms
+• Price: Full pass from €89
+• Features: Workshops, bootcamps, social dancing, parties, competition (El Mundial)
+• Access: Ioannina Airport (IOA)
+ DESIGN STYLE:
+
+• Extract colors from the attached poster
+• Dark theme with warm accents (match poster palette)
+• Modern, clean typography (match poster style or use Montserrat/Poppins)
+• Scroll-triggered fade-in animations on sections
+• Subtle hover effects on cards (lift + shadow)
+• Keep it warm and inviting — elegant nightclub meets boutique festival
+ SECTIONS (in order):
+
+1. Hero — Full viewport, use poster as background or gradient overlay, festival name, dates, location, CTA button "Get Tickets"
+2. About — Short intro about the festival: lakeside location, historic Ioannina, 3 days of salsa magic. Use 2-3 feature cards (Workshops / Social Dancing / Competition)
+3. Artists — Grid of 6 placeholder artist cards with "Coming Soon" overlay. Each card: image placeholder, name placeholder, country flag placeholder
+4. Schedule — 3 tabs or columns for Fri/Sat/Sun. Simple timeline format. Use placeholder content
+5. Venue — Split layout: text + image placeholder. Mention: 5-star hotel, 2 ballrooms, lakeside views, spa
+6. Tickets — 3 pricing cards: Early Bird (€89), Full Pass (€119), VIP (€179) with feature lists
+7. Hotels — Grid of 4 partner hotels with placeholder names and "Book Now" buttons
+8. Location — Google Map placeholder for Ioannina + "How to get there" info
+9. Footer — Social links, contact email, copyright
+ TECHNICAL:
+
+• React + Tailwind CSS
+• Mobile-first responsive
+• Smooth scroll navigation
+• Intersection Observer for scroll animations
+• Static content (no backend)
