@@ -115,7 +115,6 @@ function Nav() {
     () =>
       [
         { id: "about", label: "About" },
-        { id: "artists", label: "Artists" },
         { id: "schedule", label: "Schedule" },
         { id: "venue", label: "Venue" },
         { id: "tickets", label: "Tickets" },
@@ -248,47 +247,6 @@ function Card({
   );
 }
 
-function ArtistCard({ index }: { index: number }) {
-  return (
-    <div
-      className="group relative overflow-hidden rounded-3xl border border-border/70 bg-card/55 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-      data-testid={`card-artist-${index}`}
-    >
-      <div className="aspect-[4/5] w-full bg-gradient-to-b from-white/10 via-white/5 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 p-4">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <div className="text-sm font-semibold" data-testid={`text-artist-name-${index}`}>
-              Artist Name
-            </div>
-            <div
-              className="mt-1 text-xs text-muted-foreground"
-              data-testid={`text-artist-country-${index}`}
-            >
-              Country
-            </div>
-          </div>
-          <div
-            className="grid h-9 w-9 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10"
-            data-testid={`img-artist-flag-${index}`}
-            aria-label="Country flag placeholder"
-          >
-            <span className="text-xs">🏳️</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute inset-0 grid place-items-center bg-black/55 opacity-100 transition group-hover:bg-black/45">
-        <div className="text-center">
-          <Badge className="rounded-full px-3 py-1" data-testid={`badge-coming-soon-${index}`}>
-            Coming Soon
-          </Badge>
-          <p className="mt-2 text-xs text-muted-foreground">Lineup reveal in progress</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function TimelineItem({
   time,
@@ -514,20 +472,6 @@ export default function FestivalLanding() {
         </div>
       </Section>
 
-      {/* ARTISTS */}
-      <Section
-        id="artists"
-        label="Artists"
-        eyebrow="Lineup"
-        title="Artists"
-        description="We’re curating a lineup designed for real social dancers — announcements dropping soon."
-      >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <ArtistCard key={i} index={i} />
-          ))}
-        </div>
-      </Section>
 
       {/* SCHEDULE */}
       <Section
@@ -1016,18 +960,20 @@ function TicketCard({
         ))}
       </ul>
 
-      <Button
-        size="lg"
-        className={cn(
-          "mt-7 w-full rounded-2xl",
-          highlight
-            ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary)/0.92)]"
-            : "bg-white/5 text-foreground hover:bg-white/10",
-        )}
-        data-testid={`${testid}-cta`}
-      >
-        Choose {title}
-      </Button>
+      <a href="#tickets">
+        <Button
+          size="lg"
+          className={cn(
+            "mt-7 w-full rounded-2xl",
+            highlight
+              ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary)/0.92)]"
+              : "bg-white/5 text-foreground hover:bg-white/10",
+          )}
+          data-testid={`${testid}-cta`}
+        >
+          Choose {title}
+        </Button>
+      </a>
 
       <div className="pointer-events-none absolute inset-0 opacity-0 transition hover:opacity-100" />
     </div>
