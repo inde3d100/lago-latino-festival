@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import heroPoster from "@assets/poster-up-nobg.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -181,7 +182,7 @@ function PosterBackdrop() {
   return (
     <div aria-hidden className="absolute inset-0 overflow-hidden group">
       <img
-        src={"/../attached_assets/poster-up-nobg.jpg"}
+        src={heroPoster}
         alt=""
         className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
       />
