@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import heroPoster from "@assets/poster-up-crop.jpg";
+import heroPoster from "@assets/poster-square.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -184,8 +184,7 @@ function PosterBackdrop() {
       <img
         src={heroPoster}
         alt=""
-        className="absolute inset-0 h-[120%] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        style={{ top: "-10%" }}
+        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
       />
       <div
         className="absolute inset-0"
