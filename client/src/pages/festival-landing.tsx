@@ -184,7 +184,8 @@ function PosterBackdrop() {
       <img
         src={heroPoster}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        className="absolute inset-0 h-[120%] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        style={{ top: "-10%" }}
       />
       <div
         className="absolute inset-0"
