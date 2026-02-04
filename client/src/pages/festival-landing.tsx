@@ -179,16 +179,20 @@ function Nav() {
 
 function PosterBackdrop() {
   return (
-    <div aria-hidden className="absolute inset-0">
-      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_70%_-10%,hsl(var(--primary)/0.26),transparent_60%),radial-gradient(900px_500px_at_0%_10%,hsl(var(--accent)/0.14),transparent_65%),radial-gradient(900px_700px_at_80%_85%,rgba(255,255,255,0.06),transparent_60%)]" />
-      <div className="absolute inset-0 opacity-[0.18] mix-blend-overlay">
-        <img
-          src={"/../attached_assets/download_1770184601717.webp"}
-          alt=""
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-[hsl(var(--background))]" />
+    <div aria-hidden className="absolute inset-0 overflow-hidden group">
+      <img
+        src={"/../attached_assets/download_1770192913812.webp"}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(var(--background))]" />
     </div>
   );
 }
@@ -346,8 +350,7 @@ export default function FestivalLanding() {
               className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base"
               data-testid="text-hero-subtitle"
             >
-              Elegant nightclub energy meets boutique lakeside festival vibes — three days of
-              workshops, bootcamps, social dancing, parties, and El Mundial competition.
+              The Ultimate Salsa & Bachata Festival! Dance, connect & celebrate by the stunning lakeside of historic Ioannina.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
