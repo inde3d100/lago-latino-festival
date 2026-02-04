@@ -255,43 +255,6 @@ function Card({
   );
 }
 
-
-function TimelineItem({
-  time,
-  title,
-  desc,
-  icon,
-  testid,
-}: {
-  time: string;
-  title: string;
-  desc: string;
-  icon: React.ReactNode;
-  testid: string;
-}) {
-  return (
-    <div className="relative pl-10" data-testid={testid}>
-      <div className="absolute left-0 top-0 grid h-8 w-8 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-        {icon}
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="text-xs font-semibold text-muted-foreground" data-testid={`${testid}-time`}>
-          {time}
-        </div>
-        <div className="h-px flex-1 bg-border/70" />
-      </div>
-      <div className="mt-2">
-        <div className="text-sm font-semibold" data-testid={`${testid}-title`}>
-          {title}
-        </div>
-        <div className="mt-1 text-xs text-muted-foreground" data-testid={`${testid}-desc`}>
-          {desc}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function FestivalLanding() {
   const reduceMotion = useReducedMotion();
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -570,143 +533,38 @@ export default function FestivalLanding() {
           </TabsList>
 
           <TabsContent value="fri" className="mt-6" data-testid="panel-fri">
-            <div className="grid gap-5 md:grid-cols-2">
-              <Card testid="card-schedule-fri-day" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Day
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="14:00"
-                    title="Registration & Welcome"
-                    desc="Arrivals, wristbands, warm-up vibes"
-                    icon={<Ticket className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-fri-0"
-                  />
-                  <TimelineItem
-                    time="16:00"
-                    title="Workshops Block"
-                    desc="Technique + musicality (placeholder)"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-fri-1"
-                  />
-                </div>
-              </Card>
-              <Card testid="card-schedule-fri-night" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Night
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="22:00"
-                    title="Opening Party"
-                    desc="Social dancing until late"
-                    icon={<Music className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-fri-2"
-                  />
-                  <TimelineItem
-                    time="00:30"
-                    title="Showtime"
-                    desc="Performance slot (placeholder)"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-fri-3"
-                  />
-                </div>
-              </Card>
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
+              <h3 className="font-display text-2xl font-semibold text-foreground">
+                Schedule Coming Soon
+              </h3>
+              <p className="mt-2 max-w-md text-muted-foreground">
+                Stay tuned — full workshop and party schedule will be announced shortly.
+              </p>
             </div>
           </TabsContent>
 
           <TabsContent value="sat" className="mt-6" data-testid="panel-sat">
-            <div className="grid gap-5 md:grid-cols-2">
-              <Card testid="card-schedule-sat-day" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Day
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="12:00"
-                    title="Bootcamp"
-                    desc="Deep dive session (placeholder)"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sat-0"
-                  />
-                  <TimelineItem
-                    time="16:00"
-                    title="Workshops Block"
-                    desc="Partnerwork + styling (placeholder)"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sat-1"
-                  />
-                </div>
-              </Card>
-              <Card testid="card-schedule-sat-night" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Night
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="22:30"
-                    title="Main Party"
-                    desc="Two rooms, DJ rotation (placeholder)"
-                    icon={<Music className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sat-2"
-                  />
-                  <TimelineItem
-                    time="01:00"
-                    title="El Mundial"
-                    desc="Competition round (placeholder)"
-                    icon={<Trophy className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sat-3"
-                  />
-                </div>
-              </Card>
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
+              <h3 className="font-display text-2xl font-semibold text-foreground">
+                Schedule Coming Soon
+              </h3>
+              <p className="mt-2 max-w-md text-muted-foreground">
+                Stay tuned — full workshop and party schedule will be announced shortly.
+              </p>
             </div>
           </TabsContent>
 
           <TabsContent value="sun" className="mt-6" data-testid="panel-sun">
-            <div className="grid gap-5 md:grid-cols-2">
-              <Card testid="card-schedule-sun-day" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Day
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="13:00"
-                    title="Workshops Block"
-                    desc="Flow + musicality (placeholder)"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sun-0"
-                  />
-                  <TimelineItem
-                    time="17:00"
-                    title="Closing Jam"
-                    desc="Last dances + highlights"
-                    icon={<Music className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sun-1"
-                  />
-                </div>
-              </Card>
-              <Card testid="card-schedule-sun-night" className="p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Night
-                </div>
-                <div className="mt-4 space-y-5">
-                  <TimelineItem
-                    time="21:30"
-                    title="Farewell Party"
-                    desc="One last room, one last song"
-                    icon={<Music className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sun-2"
-                  />
-                  <TimelineItem
-                    time="23:30"
-                    title="Goodnight Ioannina"
-                    desc="See you next year"
-                    icon={<Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" />}
-                    testid="timeline-sun-3"
-                  />
-                </div>
-              </Card>
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
+              <h3 className="font-display text-2xl font-semibold text-foreground">
+                Schedule Coming Soon
+              </h3>
+              <p className="mt-2 max-w-md text-muted-foreground">
+                Stay tuned — full workshop and party schedule will be announced shortly.
+              </p>
             </div>
           </TabsContent>
         </Tabs>
