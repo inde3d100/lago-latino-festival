@@ -181,7 +181,7 @@ function PosterBackdrop() {
   return (
     <div aria-hidden className="absolute inset-0 overflow-hidden group">
       <img
-        src={"/../attached_assets/download_1770192913812.webp"}
+        src={"/../attached_assets/poster-up-nobg.jpg"}
         alt=""
         className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
       />
