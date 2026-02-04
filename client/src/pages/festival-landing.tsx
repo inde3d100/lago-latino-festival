@@ -330,11 +330,11 @@ export default function FestivalLanding() {
               The Ultimate Salsa & Bachata Festival! Dance, connect & celebrate by the stunning lakeside of historic Ioannina.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer">
+            <div className="mt-8 flex flex-col gap-3 md:flex-row md:items-center">
+              <a href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
                 <Button
                   size="lg"
-                  className="rounded-2xl px-6"
+                  className="w-full rounded-2xl px-6 md:w-auto"
                   data-testid="button-hero-tickets"
                 >
                   <Ticket className="mr-2 h-4 w-4" />
@@ -343,7 +343,7 @@ export default function FestivalLanding() {
               </a>
               <a
                 href="#location"
-                className="inline-flex items-center justify-center rounded-2xl border border-border/70 bg-card/40 px-6 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-white/5"
+                className="inline-flex w-full items-center justify-center rounded-2xl border border-border/70 bg-card/40 px-6 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-white/5 md:w-auto"
                 data-testid="link-hero-location"
               >
                 <Compass className="mr-2 h-4 w-4 text-[hsl(var(--primary))]" />
