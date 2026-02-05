@@ -12,8 +12,8 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // SPA fallback - serve index.html for all non-file routes
-  app.get("*", (_req, res) => {
+  // SPA fallback - serve index.html for all non-file routes (Express 5 syntax)
+  app.get("/{*splat}", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
