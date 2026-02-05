@@ -183,11 +183,21 @@ function Nav() {
   );
 }
 
-function ArtistCard({ index }: { index: number }) {
+function PersonCard({ 
+  index, 
+  name, 
+  role, 
+  testIdPrefix 
+}: { 
+  index: number; 
+  name: string; 
+  role: string; 
+  testIdPrefix: string;
+}) {
   return (
     <div
       className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card/60 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[hsl(var(--primary)/0.1)]"
-      data-testid={`card-artist-${index}`}
+      data-testid={`card-${testIdPrefix}-${index}`}
     >
       <div className="relative aspect-square bg-gradient-to-br from-white/5 to-white/[0.02]">
         <div className="absolute inset-0 flex items-center justify-center">
@@ -200,17 +210,26 @@ function ArtistCard({ index }: { index: number }) {
         </div>
       </div>
       <div className="p-4">
-        <h3 className="font-display text-lg font-semibold text-foreground" data-testid={`artist-name-${index}`}>
-          Artist TBA
+        <h3 className="font-display text-lg font-semibold text-foreground" data-testid={`${testIdPrefix}-name-${index}`}>
+          {name}
         </h3>
-        <p className="mt-1 text-sm text-muted-foreground" data-testid={`artist-role-${index}`}>
-          Instructor / DJ / Performer
+        <p className="mt-1 text-sm text-muted-foreground" data-testid={`${testIdPrefix}-role-${index}`}>
+          {role}
         </p>
         <div className="mt-2 flex items-center gap-1.5">
           <span className="h-4 w-6 rounded-sm bg-white/10" />
           <span className="text-xs text-muted-foreground/60">Country TBA</span>
         </div>
       </div>
+    </div>
+  );
+}
+
+function SectionHeader({ title, subtitle }: { title: string; subtitle: string }) {
+  return (
+    <div className="mb-8 text-center">
+      <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{title}</h2>
+      <p className="mt-2 text-muted-foreground">{subtitle}</p>
     </div>
   );
 }
@@ -270,13 +289,61 @@ export default function Artists() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" data-testid="section-artists-grid">
+        <SectionHeader 
+          title="Artists" 
+          subtitle="Top international artists & world-class workshops" 
+        />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 10 }).map((_, i) => (
-            <ArtistCard key={i} index={i} />
+            <PersonCard 
+              key={i} 
+              index={i} 
+              name="Artist TBA" 
+              role="Instructor / Performer"
+              testIdPrefix="artist"
+            />
           ))}
         </div>
+      </section>
 
-        <div className="mt-16 text-center" data-testid="section-artists-cta">
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 border-t border-border/30" data-testid="section-djs-grid">
+        <SectionHeader 
+          title="DJs" 
+          subtitle="Legendary DJs keeping the floor alive" 
+        />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <PersonCard 
+              key={i} 
+              index={i} 
+              name="DJ TBA" 
+              role="DJ"
+              testIdPrefix="dj"
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 border-t border-border/30" data-testid="section-videography-grid">
+        <SectionHeader 
+          title="Videography" 
+          subtitle="Capturing every moment" 
+        />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <PersonCard 
+              key={i} 
+              index={i} 
+              name="Videographer TBA" 
+              role="Videographer"
+              testIdPrefix="videographer"
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="text-center" data-testid="section-artists-cta">
           <p className="text-lg text-muted-foreground">
             Stay tuned — full lineup announcement coming soon!
           </p>
