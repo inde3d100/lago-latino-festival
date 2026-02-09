@@ -22,6 +22,7 @@ import imgDavidAylin from "@assets/david-aylin.jpg";
 import imgGabrieleNicole from "@assets/gabriele-nicole.jpg";
 import imgRitaLorenzo from "@assets/rita-lorenzo.png";
 import imgDanieleBorelli from "@assets/daniele-borelli.jpeg";
+import imgByronLozano from "@assets/byron-lozano.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -208,7 +209,7 @@ const artists: PersonData[] = [
   { name: "Gabriele & Nicole", role: "Instructor / Performer", country: "Italy", image: imgGabrieleNicole },
   { name: "Rita & Lorenzo", role: "Instructor / Performer", country: "Italy", image: imgRitaLorenzo },
   { name: "Daniele Borelli", role: "Instructor / Performer", country: "Italy", image: imgDanieleBorelli },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Byron Lozano", role: "Instructor / Performer", country: "Spain", image: imgByronLozano },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
 ];
 
