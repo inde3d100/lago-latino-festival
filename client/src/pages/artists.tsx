@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-square.jpg";
 import imgKarenRicardo from "@assets/karen-ricardo.jpg";
+import imgJhoanaPalhua from "@assets/jhoana-palhua.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -194,7 +195,7 @@ interface PersonData {
 
 const artists: PersonData[] = [
   { name: "Karen & Ricardo", role: "Instructor / Performer", country: "Chile", image: imgKarenRicardo },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Jhoana Palhua", role: "Instructor / Performer", country: "Peru", image: imgJhoanaPalhua },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
