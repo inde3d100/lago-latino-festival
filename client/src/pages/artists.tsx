@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-square.jpg";
+import imgKarenRicardo from "@assets/karen-ricardo.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -183,15 +184,46 @@ function Nav() {
   );
 }
 
+interface PersonData {
+  name: string;
+  role: string;
+  country: string;
+  image?: string;
+  tba?: boolean;
+}
+
+const artists: PersonData[] = [
+  { name: "Karen & Ricardo", role: "Instructor / Performer", country: "Chile", image: imgKarenRicardo },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+];
+
+const djs: PersonData[] = [
+  { name: "DJ TBA", role: "DJ", country: "", tba: true },
+  { name: "DJ TBA", role: "DJ", country: "", tba: true },
+  { name: "DJ TBA", role: "DJ", country: "", tba: true },
+  { name: "DJ TBA", role: "DJ", country: "", tba: true },
+];
+
+const videographers: PersonData[] = [
+  { name: "Videographer TBA", role: "Videographer", country: "", tba: true },
+  { name: "Videographer TBA", role: "Videographer", country: "", tba: true },
+];
+
 function PersonCard({ 
+  person,
   index, 
-  name, 
-  role, 
   testIdPrefix 
 }: { 
+  person: PersonData;
   index: number; 
-  name: string; 
-  role: string; 
   testIdPrefix: string;
 }) {
   return (
@@ -200,25 +232,43 @@ function PersonCard({
       data-testid={`card-${testIdPrefix}-${index}`}
     >
       <div className="relative aspect-square bg-gradient-to-br from-white/5 to-white/[0.02]">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <User className="h-16 w-16 text-white/10" />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <span className="rounded-full border border-[hsl(var(--primary)/0.5)] bg-[hsl(var(--primary)/0.15)] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--primary))]">
-            Coming Soon
-          </span>
-        </div>
+        {person.image ? (
+          <img 
+            src={person.image} 
+            alt={person.name} 
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <User className="h-16 w-16 text-white/10" />
+            </div>
+            {person.tba && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+                <span className="rounded-full border border-[hsl(var(--primary)/0.5)] bg-[hsl(var(--primary)/0.15)] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--primary))]">
+                  Coming Soon
+                </span>
+              </div>
+            )}
+          </>
+        )}
       </div>
       <div className="p-4">
         <h3 className="font-display text-lg font-semibold text-foreground" data-testid={`${testIdPrefix}-name-${index}`}>
-          {name}
+          {person.name}
         </h3>
         <p className="mt-1 text-sm text-muted-foreground" data-testid={`${testIdPrefix}-role-${index}`}>
-          {role}
+          {person.role}
         </p>
         <div className="mt-2 flex items-center gap-1.5">
-          <span className="h-4 w-6 rounded-sm bg-white/10" />
-          <span className="text-xs text-muted-foreground/60">Country TBA</span>
+          {person.tba ? (
+            <>
+              <span className="h-4 w-6 rounded-sm bg-white/10" />
+              <span className="text-xs text-muted-foreground/60">Country TBA</span>
+            </>
+          ) : (
+            <span className="text-xs text-muted-foreground">{person.country}</span>
+          )}
         </div>
       </div>
     </div>
@@ -294,12 +344,11 @@ export default function Artists() {
           subtitle="Top international artists & world-class workshops" 
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 10 }).map((_, i) => (
+          {artists.map((person, i) => (
             <PersonCard 
               key={i} 
+              person={person}
               index={i} 
-              name="Artist TBA" 
-              role="Instructor / Performer"
               testIdPrefix="artist"
             />
           ))}
@@ -312,12 +361,11 @@ export default function Artists() {
           subtitle="Legendary DJs keeping the floor alive" 
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 4 }).map((_, i) => (
+          {djs.map((person, i) => (
             <PersonCard 
               key={i} 
+              person={person}
               index={i} 
-              name="DJ TBA" 
-              role="DJ"
               testIdPrefix="dj"
             />
           ))}
@@ -330,12 +378,11 @@ export default function Artists() {
           subtitle="Capturing every moment" 
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 2 }).map((_, i) => (
+          {videographers.map((person, i) => (
             <PersonCard 
               key={i} 
+              person={person}
               index={i} 
-              name="Videographer TBA" 
-              role="Videographer"
               testIdPrefix="videographer"
             />
           ))}
