@@ -21,6 +21,7 @@ import imgYuriColucci from "@assets/yuri-colucci.jpeg";
 import imgDavidAylin from "@assets/david-aylin.jpg";
 import imgGabrieleNicole from "@assets/gabriele-nicole.jpg";
 import imgRitaLorenzo from "@assets/rita-lorenzo.png";
+import imgDanieleBorelli from "@assets/daniele-borelli.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -206,7 +207,7 @@ const artists: PersonData[] = [
   { name: "David & Aylin", role: "Instructor / Performer", country: "Spain", image: imgDavidAylin },
   { name: "Gabriele & Nicole", role: "Instructor / Performer", country: "Italy", image: imgGabrieleNicole },
   { name: "Rita & Lorenzo", role: "Instructor / Performer", country: "Italy", image: imgRitaLorenzo },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Daniele Borelli", role: "Instructor / Performer", country: "Italy", image: imgDanieleBorelli },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
 ];
