@@ -20,6 +20,7 @@ import imgDiagoCamilo from "@assets/diago-camilo.jpeg";
 import imgYuriColucci from "@assets/yuri-colucci.jpeg";
 import imgDavidAylin from "@assets/david-aylin.jpg";
 import imgGabrieleNicole from "@assets/gabriele-nicole.jpg";
+import imgRitaLorenzo from "@assets/rita-lorenzo.png";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -204,7 +205,7 @@ const artists: PersonData[] = [
   { name: "Yuri Colucci & C Crew", role: "Instructor / Performer", country: "Italy", image: imgYuriColucci },
   { name: "David & Aylin", role: "Instructor / Performer", country: "Spain", image: imgDavidAylin },
   { name: "Gabriele & Nicole", role: "Instructor / Performer", country: "Italy", image: imgGabrieleNicole },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Rita & Lorenzo", role: "Instructor / Performer", country: "Italy", image: imgRitaLorenzo },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
