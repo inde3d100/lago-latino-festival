@@ -23,6 +23,7 @@ import imgGabrieleNicole from "@assets/gabriele-nicole.jpg";
 import imgRitaLorenzo from "@assets/rita-lorenzo.png";
 import imgDanieleBorelli from "@assets/daniele-borelli.jpeg";
 import imgByronLozano from "@assets/byron-lozano.jpg";
+import imgEdsonJuan from "@assets/edson-juan.png";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -210,7 +211,7 @@ const artists: PersonData[] = [
   { name: "Rita & Lorenzo", role: "Instructor / Performer", country: "Italy", image: imgRitaLorenzo },
   { name: "Daniele Borelli", role: "Instructor / Performer", country: "Italy", image: imgDanieleBorelli },
   { name: "Byron Lozano", role: "Instructor / Performer", country: "Spain", image: imgByronLozano },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Edson & Juan", role: "Instructor / Performer", country: "Venezuela", image: imgEdsonJuan },
 ];
 
 const djs: PersonData[] = [
