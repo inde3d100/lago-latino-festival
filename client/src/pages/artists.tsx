@@ -17,6 +17,7 @@ import heroPoster from "@assets/poster-square.jpg";
 import imgKarenRicardo from "@assets/karen-ricardo.jpg";
 import imgJhoanaPalhua from "@assets/jhoana-palhua.jpeg";
 import imgDiagoCamilo from "@assets/diago-camilo.jpeg";
+import imgYuriColucci from "@assets/yuri-colucci.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -198,7 +199,7 @@ const artists: PersonData[] = [
   { name: "Karen & Ricardo", role: "Instructor / Performer", country: "Chile", image: imgKarenRicardo },
   { name: "Jhoana Palhua", role: "Instructor / Performer", country: "Peru", image: imgJhoanaPalhua },
   { name: "Diago Camilo", role: "Instructor / Performer", country: "Colombia", image: imgDiagoCamilo },
-  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Yuri Colucci & C Crew", role: "Instructor / Performer", country: "Italy", image: imgYuriColucci },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
