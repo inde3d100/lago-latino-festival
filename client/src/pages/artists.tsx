@@ -24,6 +24,7 @@ import imgRitaLorenzo from "@assets/rita-lorenzo.png";
 import imgDanieleBorelli from "@assets/daniele-borelli.jpeg";
 import imgByronLozano from "@assets/byron-lozano.jpg";
 import imgEdsonJuan from "@assets/edson-juan.png";
+import imgStellaPetrarca from "@assets/stella-petrarca.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -212,6 +213,12 @@ const artists: PersonData[] = [
   { name: "Daniele Borelli", role: "Instructor / Performer", country: "Italy", image: imgDanieleBorelli },
   { name: "Byron Lozano", role: "Instructor / Performer", country: "Spain", image: imgByronLozano },
   { name: "Edson & Juan", role: "Instructor / Performer", country: "Venezuela", image: imgEdsonJuan },
+  { name: "Stella Petrarca", role: "Instructor / Performer", country: "Italy", image: imgStellaPetrarca },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
 ];
 
 const djs: PersonData[] = [
