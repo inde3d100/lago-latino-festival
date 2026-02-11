@@ -25,6 +25,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/resized-sq-poster.jpg";
 import fullPoster from "@assets/poster-up-new.jpg";
+import navLogo from "@assets/logo-new.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -151,15 +152,7 @@ function Nav() {
                 className="group inline-flex items-center gap-2 rounded-xl px-2 py-2"
                 data-testid="link-home"
               >
-                <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-b from-[hsl(var(--primary)/0.24)] to-[hsl(var(--primary)/0.06)] ring-1 ring-[hsl(var(--primary)/0.35)]">
-                  <Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" strokeWidth={2} />
-                </span>
-                <div className="hidden sm:block">
-                  <div className="font-display text-sm leading-none tracking-tight">
-                    Lago Latino
-                  </div>
-                  <div className="mt-0.5 text-xs text-muted-foreground">Ioannina • 2026</div>
-                </div>
+                <img src={navLogo} alt="Lago Latino" className="h-10 w-auto rounded-lg" />
               </a>
 
               <div className="hidden items-center gap-1 md:flex">
@@ -284,7 +277,8 @@ function PosterBackdrop() {
       <img
         src={heroPoster}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        style={{ objectPosition: "50% 70px" }}
       />
       <div
         className="absolute inset-0"
@@ -293,7 +287,7 @@ function PosterBackdrop() {
             "linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%)",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(var(--background))]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))] via-transparent to-[hsl(var(--background))]" style={{ background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 12%, transparent 70%, hsl(var(--background)) 100%)" }} />
     </div>
   );
 }
