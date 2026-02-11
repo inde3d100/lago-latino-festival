@@ -272,7 +272,7 @@ const artists: PersonData[] = [
   { name: "Manos & Lydia", role: "Instructor / Performer", country: "Greece", image: imgManosLydia },
   { name: "Emmanouela Smyrnaiou", role: "Instructor / Performer", country: "Greece", image: imgEmmanouelajSmyrnaiou },
   { name: "Antonis & Chara", role: "Instructor / Performer", country: "Greece", image: imgAntonisChara },
-  { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda, imagePosition: "50% 10%" },
+  { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda, imagePosition: "50% 5%" },
   { name: "Sofia Spyropoulou", role: "Instructor / Performer", country: "Greece", image: imgSofiaSpyropoulou },
   { name: "Natasha Chuma", role: "Instructor / Performer", country: "Russia / Greece", image: imgNatashaChuma },
   { name: "Anna Polyzou", role: "Instructor / Performer", country: "Greece", image: imgAnnaPolyzou },
