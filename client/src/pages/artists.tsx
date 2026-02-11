@@ -29,6 +29,7 @@ import imgJohnKelly from "@assets/john-kelly.png";
 import imgGiorgosElena from "@assets/giorgos-elena.jpeg";
 import imgPanagiotisChristina from "@assets/panagiotis-christina.png";
 import imgTeoMarianna from "@assets/teo-marianna.jpeg";
+import imgChrysaDami from "@assets/chrysa-dami.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -222,6 +223,9 @@ const artists: PersonData[] = [
   { name: "Giorgos & Elena Ahinama DC", role: "Instructor / Performer", country: "Greece", image: imgGiorgosElena },
   { name: "Panagiotis & Christina", role: "Instructor / Performer", country: "Greece", image: imgPanagiotisChristina },
   { name: "Teo & Marianna Latin Grow", role: "Instructor / Performer", country: "Greece", image: imgTeoMarianna },
+  { name: "Chrysa Dami", role: "Instructor / Performer", country: "Greece", image: imgChrysaDami },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
+  { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
   { name: "Artist TBA", role: "Instructor / Performer", country: "", tba: true },
 ];
 
