@@ -239,6 +239,7 @@ interface PersonData {
   country: string;
   image?: string;
   tba?: boolean;
+  imagePosition?: string;
 }
 
 const artists: PersonData[] = [
@@ -250,7 +251,7 @@ const artists: PersonData[] = [
   { name: "Gabriele & Nicole", role: "Instructor / Performer", country: "Italy", image: imgGabrieleNicole },
   { name: "Rita & Lorenzo", role: "Instructor / Performer", country: "Italy", image: imgRitaLorenzo },
   { name: "Daniele Borelli", role: "Instructor / Performer", country: "Italy", image: imgDanieleBorelli },
-  { name: "Byron Lozano", role: "Instructor / Performer", country: "Spain", image: imgByronLozano },
+  { name: "Byron Lozano", role: "Instructor / Performer", country: "Spain", image: imgByronLozano, imagePosition: "50% 15%" },
   { name: "Edson & Juan", role: "Instructor / Performer", country: "Venezuela", image: imgEdsonJuan },
   { name: "Stella Petrarca", role: "Instructor / Performer", country: "Italy", image: imgStellaPetrarca },
   { name: "John & Kelly", role: "Instructor / Performer", country: "Greece", image: imgJohnKelly },
@@ -262,7 +263,7 @@ const artists: PersonData[] = [
   { name: "DIO", role: "Instructor / Performer", country: "Greece", image: imgDio },
   { name: "Konstantinos & Katerina", role: "Instructor / Performer", country: "Greece", image: imgKonstantinosKaterina },
   { name: "Giorgos & Evgenia", role: "Instructor / Performer", country: "Greece", image: imgGiorgosEvgenia },
-  { name: "Stavros & Katherine", role: "Instructor / Performer", country: "Greece", image: imgStavrosKatherine },
+  { name: "Stavros & Katherine", role: "Instructor / Performer", country: "Greece", image: imgStavrosKatherine, imagePosition: "50% 15%" },
   { name: "Nestoras & Natali", role: "Instructor / Performer", country: "Greece", image: imgNestorasNatali },
   { name: "Vasilis & Alexandra", role: "Instructor / Performer", country: "Greece", image: imgVasilisAlexandra },
   { name: "Vasilis Giotsis", role: "Instructor / Performer", country: "Greece", image: imgVasilisGiotsis },
@@ -271,7 +272,7 @@ const artists: PersonData[] = [
   { name: "Manos & Lydia", role: "Instructor / Performer", country: "Greece", image: imgManosLydia },
   { name: "Emmanouela Smyrnaiou", role: "Instructor / Performer", country: "Greece", image: imgEmmanouelajSmyrnaiou },
   { name: "Antonis & Chara", role: "Instructor / Performer", country: "Greece", image: imgAntonisChara },
-  { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda },
+  { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda, imagePosition: "50% 15%" },
   { name: "Sofia Spyropoulou", role: "Instructor / Performer", country: "Greece", image: imgSofiaSpyropoulou },
   { name: "Natasha Chuma", role: "Instructor / Performer", country: "Russia / Greece", image: imgNatashaChuma },
   { name: "Anna Polyzou", role: "Instructor / Performer", country: "Greece", image: imgAnnaPolyzou },
@@ -325,7 +326,7 @@ function PersonCard({
             src={person.image} 
             alt={person.name} 
             className="absolute inset-0 h-full w-full object-cover"
-            style={{ objectPosition: "50% 20%" }}
+            style={{ objectPosition: person.imagePosition || "50% 20%" }}
           />
         ) : (
           <>
