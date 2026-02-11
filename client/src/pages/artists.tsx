@@ -272,6 +272,7 @@ const artists: PersonData[] = [
   { name: "Ntinos & Chrysa", role: "Instructor / Performer", country: "Greece" },
   { name: "Dora Barkouzou", role: "Instructor / Performer", country: "Greece", image: imgDoraBarkouzou },
   { name: "Tolis & Natali", role: "Instructor / Performer", country: "Greece", image: imgTolisNatali },
+  { name: "Korina Visvardi", role: "Instructor / Performer", country: "Greece" },
 ];
 
 const djs: PersonData[] = [
