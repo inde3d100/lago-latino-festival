@@ -50,6 +50,7 @@ import imgNatashaChuma from "@assets/natasha-chuma.jpg";
 import imgAnnaPolyzou from "@assets/anna-polyzou.jpeg";
 import imgAlisaAntonova from "@assets/alisa-antonova.jpeg";
 import imgPolinaRoula from "@assets/polina-roula.jpg";
+import imgTinaMpantzi from "@assets/tina-mpantzi.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -263,6 +264,7 @@ const artists: PersonData[] = [
   { name: "Anna Polyzou", role: "Instructor / Performer", country: "Greece", image: imgAnnaPolyzou },
   { name: "Alisa Antonova", role: "Instructor / Performer", country: "Cyprus", image: imgAlisaAntonova },
   { name: "Polina Roula", role: "Instructor / Performer", country: "Greece", image: imgPolinaRoula },
+  { name: "Tina Mpantzi", role: "Instructor / Performer", country: "Greece", image: imgTinaMpantzi },
 ];
 
 const djs: PersonData[] = [
