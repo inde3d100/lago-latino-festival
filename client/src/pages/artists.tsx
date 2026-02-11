@@ -60,6 +60,7 @@ import imgDjFabrizioZoro from "@assets/dj-fabrizio-zoro.jpg";
 import imgDjMauri from "@assets/dj-mauri.jpg";
 import imgDjNicosK from "@assets/dj-nicos-k.jpg";
 import imgDjZander from "@assets/dj-zander.jpg";
+import imgDjJuan from "@assets/dj-juan.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -288,6 +289,7 @@ const djs: PersonData[] = [
   { name: "DJ Mauri", role: "DJ", country: "Chile / Greece", image: imgDjMauri },
   { name: "DJ Nicos K", role: "DJ", country: "Greece", image: imgDjNicosK },
   { name: "DJ Zander", role: "DJ", country: "Greece", image: imgDjZander },
+  { name: "DJ Juan", role: "DJ", country: "Greece", image: imgDjJuan },
 ];
 
 const mcs: PersonData[] = [
