@@ -24,7 +24,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/resized-sq-poster.jpg";
-import fullPoster from "@assets/poster-up.jpg";
+import fullPoster from "@assets/poster-up-new.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
