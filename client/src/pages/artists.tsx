@@ -34,6 +34,7 @@ import imgMargaritaSkarlea from "@assets/margarita-skarlea.jpeg";
 import imgDio from "@assets/dio.jpeg";
 import imgKonstantinosKaterina from "@assets/konstantinos-katerina.jpeg";
 import imgGiorgosEvgenia from "@assets/giorgos-evgenia.jpeg";
+import imgStavrosKatherine from "@assets/stavros-katherine.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -232,6 +233,7 @@ const artists: PersonData[] = [
   { name: "DIO", role: "Instructor / Performer", country: "Greece", image: imgDio },
   { name: "Konstantinos & Katerina", role: "Instructor / Performer", country: "Greece", image: imgKonstantinosKaterina },
   { name: "Giorgos & Evgenia", role: "Instructor / Performer", country: "Greece", image: imgGiorgosEvgenia },
+  { name: "Stavros & Katherine", role: "Instructor / Performer", country: "Greece", image: imgStavrosKatherine },
 ];
 
 const djs: PersonData[] = [
