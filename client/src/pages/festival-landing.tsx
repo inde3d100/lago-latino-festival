@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import heroPoster from "@assets/resized-sq-poster.jpg";
+import heroPoster from "@assets/poster-background-new.jpg";
 import fullPoster from "@assets/poster-up-new.jpg";
 import navLogo from "@assets/logo-new.jpg";
 
@@ -278,7 +278,7 @@ function PosterBackdrop() {
         className="absolute inset-0 h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0) 150px), linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%), url(${heroPoster})`,
-          backgroundPosition: "center top, center top, center 80px",
+          backgroundPosition: "center top, center top, center top",
           backgroundSize: "100% 100%, 100% 100%, cover",
           backgroundRepeat: "no-repeat",
           filter: "blur(0.5px)",
