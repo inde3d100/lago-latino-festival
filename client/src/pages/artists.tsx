@@ -37,6 +37,7 @@ import imgGiorgosEvgenia from "@assets/giorgos-evgenia.jpeg";
 import imgStavrosKatherine from "@assets/stavros-katherine.jpeg";
 import imgNestorasNatali from "@assets/nestoras-natali.png";
 import imgVasilisAlexandra from "@assets/vasilis-alexandra.jpeg";
+import imgVasilisGiotsis from "@assets/vasilis-giotsis.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -238,6 +239,7 @@ const artists: PersonData[] = [
   { name: "Stavros & Katherine", role: "Instructor / Performer", country: "Greece", image: imgStavrosKatherine },
   { name: "Nestoras & Natali", role: "Instructor / Performer", country: "Greece", image: imgNestorasNatali },
   { name: "Vasilis & Alexandra", role: "Instructor / Performer", country: "Greece", image: imgVasilisAlexandra },
+  { name: "Vasilis Giotsis", role: "Instructor / Performer", country: "Greece", image: imgVasilisGiotsis },
 ];
 
 const djs: PersonData[] = [
