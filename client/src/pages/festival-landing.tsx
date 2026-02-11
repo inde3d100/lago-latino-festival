@@ -287,7 +287,7 @@ function PosterBackdrop() {
             "linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%)",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))] via-transparent to-[hsl(var(--background))]" style={{ background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 12%, transparent 70%, hsl(var(--background)) 100%)" }} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(15,15,26,1) 0%, rgba(15,15,26,0.7) 6%, rgba(15,15,26,0) 14%, transparent 70%, hsl(var(--background)) 100%)" }} />
     </div>
   );
 }
