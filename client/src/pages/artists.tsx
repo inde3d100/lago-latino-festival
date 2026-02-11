@@ -53,6 +53,7 @@ import imgPolinaRoula from "@assets/polina-roula.jpg";
 import imgTinaMpantzi from "@assets/tina-mpantzi.jpg";
 import imgGiorgosDervos from "@assets/giorgos-dervos.jpeg";
 import imgDoraBarkouzou from "@assets/dora-barkouzou.jpeg";
+import imgTolisNatali from "@assets/tolis-natali.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -270,6 +271,7 @@ const artists: PersonData[] = [
   { name: "Giorgos Dervos", role: "Instructor / Performer", country: "Greece", image: imgGiorgosDervos },
   { name: "Ntinos & Chrysa", role: "Instructor / Performer", country: "Greece" },
   { name: "Dora Barkouzou", role: "Instructor / Performer", country: "Greece", image: imgDoraBarkouzou },
+  { name: "Tolis & Natali", role: "Instructor / Performer", country: "Greece", image: imgTolisNatali },
 ];
 
 const djs: PersonData[] = [
