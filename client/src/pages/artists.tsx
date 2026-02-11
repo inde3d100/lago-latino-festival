@@ -47,6 +47,7 @@ import imgKikoMagda from "@assets/kiko-magda.png";
 import imgKikiKakoullis from "@assets/kiki-kakoullis.jpeg";
 import imgSofiaSpyropoulou from "@assets/sofia-spyropoulou.jpeg";
 import imgNatashaChuma from "@assets/natasha-chuma.jpg";
+import imgAnnaPolyzou from "@assets/anna-polyzou.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -257,6 +258,7 @@ const artists: PersonData[] = [
   { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda },
   { name: "Sofia Spyropoulou", role: "Instructor / Performer", country: "Greece", image: imgSofiaSpyropoulou },
   { name: "Natasha Chuma", role: "Instructor / Performer", country: "Russia / Greece", image: imgNatashaChuma },
+  { name: "Anna Polyzou", role: "Instructor / Performer", country: "Greece", image: imgAnnaPolyzou },
 ];
 
 const djs: PersonData[] = [
