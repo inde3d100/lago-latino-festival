@@ -42,6 +42,8 @@ import imgSteliosKonstantina from "@assets/stelios-konstantina.png";
 import imgKonstantinosAnna from "@assets/konstantinos-anna.jpeg";
 import imgManosLydia from "@assets/manos-lydia.jpeg";
 import imgEmmanouelajSmyrnaiou from "@assets/emmanouela-smyrnaiou.jpeg";
+import imgAntonisChara from "@assets/antonis-chara.jpg";
+import imgKikoMagda from "@assets/kiko-magda.png";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -248,6 +250,8 @@ const artists: PersonData[] = [
   { name: "Konstantinos & Anna", role: "Instructor / Performer", country: "Greece", image: imgKonstantinosAnna },
   { name: "Manos & Lydia", role: "Instructor / Performer", country: "Greece", image: imgManosLydia },
   { name: "Emmanouela Smyrnaiou", role: "Instructor / Performer", country: "Greece", image: imgEmmanouelajSmyrnaiou },
+  { name: "Antonis & Chara", role: "Instructor / Performer", country: "Greece", image: imgAntonisChara },
+  { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda },
 ];
 
 const djs: PersonData[] = [
