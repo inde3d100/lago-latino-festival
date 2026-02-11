@@ -57,6 +57,7 @@ import imgTolisNatali from "@assets/tolis-natali.jpg";
 import imgLydiaLagou from "@assets/lydia-lagou.jpeg";
 import imgSuertoRicoMantha from "@assets/suerto-rico-mantha.jpg";
 import imgDjFabrizioZoro from "@assets/dj-fabrizio-zoro.jpg";
+import imgDjMauri from "@assets/dj-mauri.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -282,7 +283,7 @@ const artists: PersonData[] = [
 
 const djs: PersonData[] = [
   { name: "DJ Fabrizio Zoro", role: "DJ", country: "Italy", image: imgDjFabrizioZoro },
-  { name: "DJ TBA", role: "DJ", country: "", tba: true },
+  { name: "DJ Mauri", role: "DJ", country: "Chile / Greece", image: imgDjMauri },
   { name: "DJ TBA", role: "DJ", country: "", tba: true },
   { name: "DJ TBA", role: "DJ", country: "", tba: true },
 ];
