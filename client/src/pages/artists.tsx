@@ -302,7 +302,7 @@ const mcs: PersonData[] = [
 ];
 
 const videographers: PersonData[] = [
-  { name: "Fanis Tsekos", role: "Videographer", country: "Greece", image: imgFanisTsekos, imagePosition: "50% 20%" },
+  { name: "Fanis Tsekos", role: "Videographer", country: "Greece", image: imgFanisTsekos, imagePosition: "50% 5%" },
   { name: "Vintzi TV", role: "Videographer", country: "", image: imgVintziTv },
 ];
 
