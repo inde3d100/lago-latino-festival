@@ -267,6 +267,7 @@ const artists: PersonData[] = [
   { name: "Polina Roula", role: "Instructor / Performer", country: "Greece", image: imgPolinaRoula },
   { name: "Tina Mpantzi", role: "Instructor / Performer", country: "Greece", image: imgTinaMpantzi },
   { name: "Giorgos Dervos", role: "Instructor / Performer", country: "Greece", image: imgGiorgosDervos },
+  { name: "Ntinos & Chrysa", role: "Instructor / Performer", country: "Greece" },
 ];
 
 const djs: PersonData[] = [
