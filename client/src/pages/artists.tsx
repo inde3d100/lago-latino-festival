@@ -45,6 +45,7 @@ import imgEmmanouelajSmyrnaiou from "@assets/emmanouela-smyrnaiou.jpeg";
 import imgAntonisChara from "@assets/antonis-chara.jpg";
 import imgKikoMagda from "@assets/kiko-magda.png";
 import imgKikiKakoullis from "@assets/kiki-kakoullis.jpeg";
+import imgSofiaSpyropoulou from "@assets/sofia-spyropoulou.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -253,6 +254,7 @@ const artists: PersonData[] = [
   { name: "Emmanouela Smyrnaiou", role: "Instructor / Performer", country: "Greece", image: imgEmmanouelajSmyrnaiou },
   { name: "Antonis & Chara", role: "Instructor / Performer", country: "Greece", image: imgAntonisChara },
   { name: "Kiko & Magda", role: "Instructor / Performer", country: "Greece", image: imgKikoMagda },
+  { name: "Sofia Spyropoulou", role: "Instructor / Performer", country: "Greece", image: imgSofiaSpyropoulou },
 ];
 
 const djs: PersonData[] = [
