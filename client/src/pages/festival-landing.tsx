@@ -274,20 +274,20 @@ function Nav() {
 function PosterBackdrop() {
   return (
     <div aria-hidden className="absolute inset-0 overflow-hidden group">
-      <img
-        src={heroPoster}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        style={{ objectPosition: "50% 70px" }}
-      />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         style={{
-          background:
-            "linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%)",
+          backgroundImage: `linear-gradient(to bottom, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0) 150px), linear-gradient(to right, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.6) 50%, rgba(15,15,26,0.4) 100%), url(${heroPoster})`,
+          backgroundPosition: "center top, center top, center 80px",
+          backgroundSize: "100% 100%, 100% 100%, cover",
+          backgroundRepeat: "no-repeat",
+          filter: "blur(0.5px)",
+          imageRendering: "auto",
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
         }}
       />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(15,15,26,1) 0%, rgba(15,15,26,0.7) 6%, rgba(15,15,26,0) 14%, transparent 70%, hsl(var(--background)) 100%)" }} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 70%, hsl(var(--background)) 100%)" }} />
     </div>
   );
 }
