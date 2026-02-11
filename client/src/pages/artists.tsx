@@ -44,6 +44,7 @@ import imgManosLydia from "@assets/manos-lydia.jpeg";
 import imgEmmanouelajSmyrnaiou from "@assets/emmanouela-smyrnaiou.jpeg";
 import imgAntonisChara from "@assets/antonis-chara.jpg";
 import imgKikoMagda from "@assets/kiko-magda.png";
+import imgKikiKakoullis from "@assets/kiki-kakoullis.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -261,6 +262,10 @@ const djs: PersonData[] = [
   { name: "DJ TBA", role: "DJ", country: "", tba: true },
 ];
 
+const mcs: PersonData[] = [
+  { name: "Kiki Kakoullis", role: "MC", country: "Greece", image: imgKikiKakoullis },
+];
+
 const videographers: PersonData[] = [
   { name: "Videographer TBA", role: "Videographer", country: "", tba: true },
   { name: "Videographer TBA", role: "Videographer", country: "", tba: true },
@@ -417,6 +422,23 @@ export default function Artists() {
               person={person}
               index={i} 
               testIdPrefix="dj"
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 border-t border-border/30" data-testid="section-mc-grid">
+        <SectionHeader 
+          title="MC" 
+          subtitle="Your host for the festival" 
+        />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {mcs.map((person, i) => (
+            <PersonCard 
+              key={i} 
+              person={person}
+              index={i} 
+              testIdPrefix="mc"
             />
           ))}
         </div>
