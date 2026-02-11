@@ -54,6 +54,7 @@ import imgTinaMpantzi from "@assets/tina-mpantzi.jpg";
 import imgGiorgosDervos from "@assets/giorgos-dervos.jpeg";
 import imgDoraBarkouzou from "@assets/dora-barkouzou.jpeg";
 import imgTolisNatali from "@assets/tolis-natali.jpg";
+import imgLydiaLagou from "@assets/lydia-lagou.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -273,6 +274,7 @@ const artists: PersonData[] = [
   { name: "Dora Barkouzou", role: "Instructor / Performer", country: "Greece", image: imgDoraBarkouzou },
   { name: "Tolis & Natali", role: "Instructor / Performer", country: "Greece", image: imgTolisNatali },
   { name: "Korina Visvardi", role: "Instructor / Performer", country: "Greece" },
+  { name: "Lydia Lagou", role: "Instructor / Performer", country: "Greece", image: imgLydiaLagou },
 ];
 
 const djs: PersonData[] = [
