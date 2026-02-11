@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import heroPoster from "@assets/lago-latino-site-poster.jpg";
+import heroPoster from "@assets/resized-sq-poster.jpg";
 import fullPoster from "@assets/poster-up.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
