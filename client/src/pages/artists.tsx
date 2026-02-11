@@ -63,6 +63,7 @@ import imgDjZander from "@assets/dj-zander.jpg";
 import imgDjJuan from "@assets/dj-juan.jpg";
 import imgDjByron from "@assets/dj-byron.jpeg";
 import imgFanisTsekos from "@assets/fanis-tsekos.png";
+import imgVintziTv from "@assets/vintzi-tv.png";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -301,7 +302,7 @@ const mcs: PersonData[] = [
 
 const videographers: PersonData[] = [
   { name: "Fanis Tsekos", role: "Videographer", country: "Greece", image: imgFanisTsekos },
-  { name: "Videographer TBA", role: "Videographer", country: "", tba: true },
+  { name: "Vintzi TV", role: "Videographer", country: "", image: imgVintziTv },
 ];
 
 function PersonCard({ 
