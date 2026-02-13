@@ -74,6 +74,7 @@ function Nav() {
   const links = [
     { id: "about", label: "About", href: "/#about" },
     { id: "artists", label: "Artists", href: "/artists" },
+    { id: "competition", label: "Competition", href: "/competition" },
     { id: "schedule", label: "Schedule", href: "/#schedule" },
     { id: "venue", label: "Venue", href: "/#venue" },
     { id: "tickets", label: "Tickets", href: "/#tickets" },
