@@ -78,7 +78,6 @@ function Nav() {
     { id: "venue", label: "Venue", href: "/#venue" },
     { id: "tickets", label: "Tickets", href: "/#tickets" },
     { id: "hotels", label: "Hotels", href: "/#hotels" },
-    { id: "location", label: "Location", href: "/#location" },
   ];
 
   useEffect(() => {

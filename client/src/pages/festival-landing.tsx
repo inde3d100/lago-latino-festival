@@ -127,7 +127,6 @@ function Nav() {
     { id: "venue", label: "Venue", href: "#venue" },
     { id: "tickets", label: "Tickets", href: "#tickets" },
     { id: "hotels", label: "Hotels", href: "#hotels" },
-    { id: "location", label: "Location", href: "#location" },
   ];
 
   useEffect(() => {
@@ -430,9 +429,9 @@ export default function FestivalLanding() {
                 </Button>
               </a>
               <a
-                href="#location"
+                href="#venue"
                 className="inline-flex w-full items-center justify-center rounded-2xl border border-border/70 bg-card/40 px-6 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-white/5 md:w-auto"
-                data-testid="link-hero-location"
+                data-testid="link-hero-venue"
               >
                 <Compass className="mr-2 h-4 w-4 text-[hsl(var(--primary))]" />
                 How to get there
@@ -718,6 +717,55 @@ export default function FestivalLanding() {
             </div>
           </div>
         </div>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <Card testid="card-how-to-get" className="p-7">
+            <h3 className="font-display text-2xl tracking-tight" data-testid="text-howto-title">
+              How to get there
+            </h3>
+            <div className="mt-5 space-y-4">
+              <div className="flex gap-3" data-testid="row-howto-airport">
+                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
+                  <Plane className="h-5 w-5 text-[hsl(var(--primary))]" />
+                </span>
+                <div>
+                  <div className="text-sm font-semibold" data-testid="text-howto-airport-title">
+                    Fly to IOA
+                  </div>
+                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-airport-desc">
+                    Ioannina Airport (IOA) is the closest — ideal for a quick arrival.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3" data-testid="row-howto-venue">
+                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
+                  <MapPin className="h-5 w-5 text-[hsl(var(--primary))]" />
+                </span>
+                <div>
+                  <div className="text-sm font-semibold" data-testid="text-howto-venue-title">
+                    Head to Epirus Palace
+                  </div>
+                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-venue-desc">
+                    Venue: Epirus Palace Hotel Congress & Spa 5*
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3" data-testid="row-howto-tip">
+                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
+                  <Compass className="h-5 w-5 text-[hsl(var(--primary))]" />
+                </span>
+                <div>
+                  <div className="text-sm font-semibold" data-testid="text-howto-tip-title">
+                    Plan for nights
+                  </div>
+                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-tip-desc">
+                    Bring layers and comfy shoes — the schedule is built for late socials.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
       </Section>
       {/* TICKETS */}
       <Section
@@ -788,81 +836,6 @@ export default function FestivalLanding() {
               </Button>
             </Card>
           ))}
-        </div>
-      </Section>
-      {/* LOCATION */}
-      <Section
-        id="location"
-        label="Location"
-        eyebrow="Ioannina"
-        title="Location"
-        description="Arrive via Ioannina Airport (IOA) and settle into the lakeside — the venue is designed for easy, comfortable movement all weekend."
-      >
-        <div className="grid gap-5 lg:grid-cols-2">
-          <div
-            className="grain relative overflow-hidden rounded-3xl border border-border/70 bg-card/55 shadow-sm"
-            data-testid="map-venue"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_30%_10%,rgba(255,255,255,0.08),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.04),transparent)]" />
-            <div className="relative p-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-black/30 px-3 py-1 text-xs font-semibold text-muted-foreground">
-                Map placeholder
-              </div>
-              <div className="mt-6 max-w-sm">
-                <div className="font-display text-2xl tracking-tight">Ioannina, Greece</div>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Replace with an embedded map when you’re ready.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <Card testid="card-how-to-get" className="p-7">
-            <h3 className="font-display text-2xl tracking-tight" data-testid="text-howto-title">
-              How to get there
-            </h3>
-            <div className="mt-5 space-y-4">
-              <div className="flex gap-3" data-testid="row-howto-airport">
-                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-                  <Plane className="h-5 w-5 text-[hsl(var(--primary))]" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold" data-testid="text-howto-airport-title">
-                    Fly to IOA
-                  </div>
-                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-airport-desc">
-                    Ioannina Airport (IOA) is the closest — ideal for a quick arrival.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3" data-testid="row-howto-venue">
-                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-                  <MapPin className="h-5 w-5 text-[hsl(var(--primary))]" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold" data-testid="text-howto-venue-title">
-                    Head to Epirus Palace
-                  </div>
-                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-venue-desc">
-                    Venue: Epirus Palace Hotel Congress & Spa 5* (placeholder directions).
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3" data-testid="row-howto-tip">
-                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-                  <Compass className="h-5 w-5 text-[hsl(var(--primary))]" />
-                </span>
-                <div>
-                  <div className="text-sm font-semibold" data-testid="text-howto-tip-title">
-                    Plan for nights
-                  </div>
-                  <p className="mt-1 text-sm text-muted-foreground" data-testid="text-howto-tip-desc">
-                    Bring layers and comfy shoes — the schedule is built for late socials.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
         </div>
       </Section>
       {/* FOOTER */}
