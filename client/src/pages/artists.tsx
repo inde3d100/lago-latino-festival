@@ -5,7 +5,6 @@ import {
   Ticket,
   Instagram,
   Facebook,
-  Youtube,
   ExternalLink,
   User,
   Menu,
@@ -373,22 +372,26 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle: string })
 function SocialButton({
   icon,
   label,
+  href,
   testid,
 }: {
   icon: React.ReactNode;
   label: string;
+  href: string;
   testid: string;
 }) {
   return (
-    <button
-      type="button"
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-2 rounded-2xl border border-border/70 bg-white/5 px-4 py-2 text-xs font-semibold text-muted-foreground transition hover:-translate-y-0.5 hover:bg-white/10 hover:text-foreground"
       data-testid={testid}
       aria-label={label}
     >
       {icon}
       <span className="hidden sm:inline">{label}</span>
-    </button>
+    </a>
   );
 }
 
@@ -524,9 +527,8 @@ export default function Artists() {
             </div>
 
             <div className="flex items-center gap-2" data-testid="row-footer-social">
-              <SocialButton icon={<Instagram className="h-4 w-4" />} label="Instagram" testid="button-social-instagram" />
-              <SocialButton icon={<Facebook className="h-4 w-4" />} label="Facebook" testid="button-social-facebook" />
-              <SocialButton icon={<Youtube className="h-4 w-4" />} label="YouTube" testid="button-social-youtube" />
+              <SocialButton icon={<Instagram className="h-4 w-4" />} label="Instagram" href="https://www.instagram.com/lagolatino/" testid="button-social-instagram" />
+              <SocialButton icon={<Facebook className="h-4 w-4" />} label="Facebook" href="https://www.facebook.com/profile.php?id=61577140017082" testid="button-social-facebook" />
             </div>
           </div>
 
