@@ -27,7 +27,7 @@ const pdfDocuments: PdfDocument[] = [
   {
     title: "Competition Rules",
     description: "Official rules and regulations for all competition categories",
-    path: "/placeholder-competition-rules.pdf",
+    path: "/competition-rules.pdf",
   },
 ];
 
