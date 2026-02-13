@@ -66,6 +66,7 @@ import imgFanisTsekos from "@assets/fanis-tsekos.png";
 import imgVintziTv from "@assets/vintzi-tv.png";
 import imgNtinosChrisa from "@assets/WhatsApp_Image_2026-02-12_at_13.21.38_1770969052101.jpeg";
 import imgKorinaVisvardi from "@assets/WhatsApp_Image_2026-02-12_at_13.21.19_1770969088049.jpeg";
+import navLogo from "@assets/logo-new.jpg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,15 +103,7 @@ function Nav() {
                 className="group inline-flex items-center gap-2 rounded-xl px-2 py-2"
                 data-testid="link-home"
               >
-                <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-b from-[hsl(var(--primary)/0.24)] to-[hsl(var(--primary)/0.06)] ring-1 ring-[hsl(var(--primary)/0.35)]">
-                  <Sparkles className="h-4 w-4 text-[hsl(var(--primary))]" strokeWidth={2} />
-                </span>
-                <div className="hidden sm:block">
-                  <div className="font-display text-sm leading-none tracking-tight">
-                    Lago Latino
-                  </div>
-                  <div className="mt-0.5 text-xs text-muted-foreground">Ioannina • 2026</div>
-                </div>
+                <img src={navLogo} alt="Lago Latino" className="h-10 w-auto rounded-lg" />
               </Link>
 
               <div className="hidden items-center gap-1 md:flex">
