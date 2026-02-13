@@ -374,7 +374,6 @@ export default function FestivalLanding() {
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
       <Nav />
-
       {/* HERO */}
       <header
         ref={heroRef}
@@ -402,9 +401,7 @@ export default function FestivalLanding() {
               <Badge
                 className="rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
                 data-testid="badge-hero-price"
-              >
-                Full pass from €89
-              </Badge>
+              >Full pass from €119</Badge>
             </div>
 
             <h1
@@ -473,7 +470,6 @@ export default function FestivalLanding() {
           </div>
         </div>
       </header>
-
       {/* ABOUT */}
       <Section
         id="about"
@@ -564,7 +560,6 @@ export default function FestivalLanding() {
           </button>
         </div>
       </Section>
-
       {lightboxOpen && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center"
@@ -602,7 +597,6 @@ export default function FestivalLanding() {
           </motion.div>
         </div>
       )}
-
       {/* SCHEDULE */}
       <Section
         id="schedule"
@@ -661,7 +655,6 @@ export default function FestivalLanding() {
           </TabsContent>
         </Tabs>
       </Section>
-
       {/* VENUE */}
       <Section
         id="venue"
@@ -722,7 +715,6 @@ export default function FestivalLanding() {
           </div>
         </div>
       </Section>
-
       {/* TICKETS */}
       <Section
         id="tickets"
@@ -755,7 +747,6 @@ export default function FestivalLanding() {
           />
         </div>
       </Section>
-
       {/* HOTELS */}
       <Section
         id="hotels"
@@ -795,7 +786,6 @@ export default function FestivalLanding() {
           ))}
         </div>
       </Section>
-
       {/* LOCATION */}
       <Section
         id="location"
@@ -872,7 +862,6 @@ export default function FestivalLanding() {
           </Card>
         </div>
       </Section>
-
       {/* FOOTER */}
       <footer className="border-t border-border/70 bg-card/40" data-testid="footer">
         <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
