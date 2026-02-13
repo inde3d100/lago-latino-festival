@@ -220,39 +220,51 @@ function PdfModal({
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="relative z-10 flex h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-border/70 bg-background shadow-2xl">
+      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-border/70 bg-background shadow-2xl">
         <div className="flex items-center justify-between border-b border-border/70 px-6 py-4">
           <h3 className="font-display text-lg font-semibold" data-testid="text-modal-title">
             {doc.title}
           </h3>
-          <div className="flex items-center gap-2">
+          <button
+            type="button"
+            className="grid h-9 w-9 place-items-center rounded-xl text-foreground transition hover:bg-white/5"
+            onClick={onClose}
+            aria-label="Close modal"
+            data-testid="button-close-modal"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+        <div className="flex flex-col items-center gap-6 px-6 py-10">
+          <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-b from-[hsl(var(--primary)/0.24)] to-[hsl(var(--primary)/0.06)] ring-1 ring-[hsl(var(--primary)/0.35)]">
+            <FileText className="h-8 w-8 text-[hsl(var(--primary))]" />
+          </div>
+          <p className="text-center text-muted-foreground">{doc.description}</p>
+          <div className="flex w-full flex-col gap-3 sm:flex-row">
+            <a
+              href={doc.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1"
+              data-testid="button-view-pdf"
+            >
+              <Button className="w-full rounded-xl">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View Rules
+              </Button>
+            </a>
             <a
               href={doc.path}
               download
-              className="inline-flex items-center gap-2 rounded-xl border border-border/70 bg-white/5 px-4 py-2 text-xs font-semibold text-muted-foreground transition hover:bg-white/10 hover:text-foreground"
+              className="flex-1"
               data-testid="button-download-pdf"
             >
-              <Download className="h-4 w-4" />
-              Download
+              <Button variant="outline" className="w-full rounded-xl">
+                <Download className="mr-2 h-4 w-4" />
+                Download
+              </Button>
             </a>
-            <button
-              type="button"
-              className="grid h-9 w-9 place-items-center rounded-xl text-foreground transition hover:bg-white/5"
-              onClick={onClose}
-              aria-label="Close modal"
-              data-testid="button-close-modal"
-            >
-              <X className="h-5 w-5" />
-            </button>
           </div>
-        </div>
-        <div className="flex-1 overflow-auto">
-          <iframe
-            src={doc.path}
-            className="h-full w-full"
-            title={doc.title}
-            data-testid="iframe-pdf"
-          />
         </div>
       </div>
     </div>
