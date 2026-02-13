@@ -64,6 +64,7 @@ import imgDjJuan from "@assets/dj-juan.jpg";
 import imgDjByron from "@assets/dj-byron.jpeg";
 import imgFanisTsekos from "@assets/fanis-tsekos.png";
 import imgVintziTv from "@assets/vintzi-tv.png";
+import imgNtinosChrisa from "@assets/WhatsApp_Image_2026-02-12_at_13.21.38_1770969052101.jpeg";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -280,7 +281,7 @@ const artists: PersonData[] = [
   { name: "Polina Roula", role: "Instructor / Performer", country: "Greece", image: imgPolinaRoula },
   { name: "Tina Mpantzi", role: "Instructor / Performer", country: "Greece", image: imgTinaMpantzi },
   { name: "Giorgos Dervos", role: "Instructor / Performer", country: "Greece", image: imgGiorgosDervos },
-  { name: "Ntinos & Chrysa", role: "Instructor / Performer", country: "Greece" },
+  { name: "Ntinos & Chrysa", role: "Instructor / Performer", country: "Greece", image: imgNtinosChrisa, imagePosition: "50% 15%" },
   { name: "Dora Barkouzou", role: "Instructor / Performer", country: "Greece", image: imgDoraBarkouzou },
   { name: "Tolis & Natali", role: "Instructor / Performer", country: "Greece", image: imgTolisNatali },
   { name: "Korina Visvardi", role: "Instructor / Performer", country: "Greece" },
