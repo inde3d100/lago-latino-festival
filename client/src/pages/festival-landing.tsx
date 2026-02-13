@@ -698,18 +698,23 @@ export default function FestivalLanding() {
             data-testid="img-venue-placeholder"
             aria-label="Venue image placeholder"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_30%_10%,hsl(var(--primary)/0.2),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.06),transparent)]" />
-            <div className="relative h-full min-h-[320px] p-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-black/30 px-3 py-1 text-xs font-semibold text-muted-foreground">
-                Image placeholder
-                <ExternalLink className="h-3.5 w-3.5" />
-              </div>
-              <div className="mt-6 max-w-sm">
-                <div className="font-display text-2xl tracking-tight">Lakeside views & boutique comfort</div>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Swap in a real venue photo when ready — the layout is built to shine on mobile.
-                </p>
-              </div>
+            <div className="p-7 pb-0">
+              <div className="font-display text-2xl tracking-tight" data-testid="text-venue-name">Epirus Palace Congress</div>
+              <p className="mt-2 text-sm text-muted-foreground" data-testid="text-venue-address">
+                Ioannina, Greece
+              </p>
+            </div>
+            <div className="p-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14028.16362916453!2d20.841077587405266!3d39.65951574270266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135be9ca7232227f%3A0xbb3fe03c009d5e60!2sEpirus%20Palace%20Congress!5e0!3m2!1sen!2sgr!4v1770971099144!5m2!1sen!2sgr"
+                className="w-full rounded-2xl"
+                style={{ height: "400px", border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Epirus Palace Congress - Venue Location"
+                data-testid="iframe-map"
+              />
             </div>
           </div>
         </div>
@@ -796,8 +801,7 @@ export default function FestivalLanding() {
         <div className="grid gap-5 lg:grid-cols-2">
           <div
             className="grain relative overflow-hidden rounded-3xl border border-border/70 bg-card/55 shadow-sm"
-            data-testid="map-placeholder"
-            aria-label="Google Map placeholder"
+            data-testid="map-venue"
           >
             <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_30%_10%,rgba(255,255,255,0.08),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.04),transparent)]" />
             <div className="relative p-7">
