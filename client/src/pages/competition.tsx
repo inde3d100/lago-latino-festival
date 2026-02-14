@@ -385,14 +385,14 @@ export default function Competition() {
             Ready to compete? Secure your spot at the festival!
           </p>
           <a
-            href="https://fienta.com/lago-latino?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+            href="https://www.elmundial.dance/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-block"
           >
-            <Button size="lg" className="rounded-2xl px-8" data-testid="button-competition-tickets">
+            <Button size="lg" className="rounded-2xl px-8" data-testid="button-competition-register">
               <Ticket className="mr-2 h-4 w-4" />
-              Get Tickets
+              Register Here
             </Button>
           </a>
         </div>
