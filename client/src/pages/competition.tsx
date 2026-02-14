@@ -344,9 +344,7 @@ export default function Competition() {
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-video">
         <div className="mb-8 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">by Karen & Ricardo</h2>
-          <p className="mt-2 text-muted-foreground">
-            Get a taste of the competition energy
-          </p>
+          <p className="mt-2 text-muted-foreground">EL MUNDIAL 2026</p>
         </div>
         <div className="relative w-full overflow-hidden rounded-2xl border border-border/70" style={{ paddingTop: "56.25%" }} data-testid="video-competition">
           <iframe
