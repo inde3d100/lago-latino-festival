@@ -293,6 +293,7 @@ const djs: PersonData[] = [
 
 const mcs: PersonData[] = [
   { name: "Kiki Kakoullis", role: "MC", country: "Greece", image: imgKikiKakoullis },
+  { name: "DJ Mauri MC", role: "MC", country: "Chile / Greece", image: imgDjMauri },
 ];
 
 const videographers: PersonData[] = [
@@ -463,7 +464,7 @@ export default function Artists() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 border-t border-border/30" data-testid="section-mc-grid">
         <SectionHeader 
           title="MC" 
-          subtitle="Your host for the festival" 
+          subtitle="Your hosts for the festival" 
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {mcs.map((person, i) => (
