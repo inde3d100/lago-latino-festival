@@ -805,35 +805,38 @@ export default function FestivalLanding() {
         label="Hotels"
         eyebrow="Stay"
         title="Partner hotels"
-        description="Four nearby options to match your vibe. (Placeholders — replace with real partners)"
+        description="Our partner hotels for the weekend — all fully booked!"
       >
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <Card key={i} testid={`card-hotel-${i}`} className="p-5">
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <div className="text-sm font-semibold" data-testid={`text-hotel-name-${i}`}>
-                    Partner Hotel
-                  </div>
-                  <div
-                    className="mt-1 text-xs text-muted-foreground"
-                    data-testid={`text-hotel-distance-${i}`}
-                  >
-                    5–12 min from venue
-                  </div>
+          {[
+            { name: "Epirus Palace Hotel Congress & Spa", stars: 5, tag: "MAIN VENUE" },
+            { name: "Giotis Boutique Hotel", stars: 4 },
+            { name: "Hotel Filoxenia", stars: 3 },
+            { name: "AAR Hotel & Spa", stars: 4 },
+          ].map((hotel, i) => (
+            <Card key={i} testid={`card-hotel-${i}`} className="relative p-5 overflow-hidden">
+              {"tag" in hotel && hotel.tag && (
+                <div className="absolute top-3 right-3 rounded-full bg-[hsl(var(--primary))] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-black" data-testid={`badge-hotel-tag-${i}`}>
+                  {hotel.tag}
                 </div>
-                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
+              )}
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10">
                   <Hotel className="h-5 w-5 text-[hsl(var(--primary))]" />
                 </span>
+                <div>
+                  <div className="text-sm font-semibold leading-tight" data-testid={`text-hotel-name-${i}`}>
+                    {hotel.name}
+                  </div>
+                  <div className="mt-1 flex items-center gap-1 text-xs text-[hsl(var(--primary))]" data-testid={`text-hotel-stars-${i}`}>
+                    {"★".repeat(hotel.stars)}
+                  </div>
+                </div>
               </div>
 
-              <Button
-                variant="secondary"
-                className="mt-4 w-full rounded-2xl"
-                data-testid={`button-book-hotel-${i}`}
-              >
-                Book Now
-              </Button>
+              <div className="mt-4 flex w-full items-center justify-center rounded-2xl border border-red-500/30 bg-red-500/10 py-2.5 text-sm font-bold uppercase tracking-wider text-red-400" data-testid={`badge-hotel-soldout-${i}`}>
+                Sold Out
+              </div>
             </Card>
           ))}
         </div>
