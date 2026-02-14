@@ -328,20 +328,7 @@ export default function Competition() {
           </p>
         </div>
       </section>
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6" data-testid="section-competition-about">
-        <div className="mb-8 text-center">
-          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-            About the Competition
-          </h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Lago Latino Festival hosts an exciting dance competition open to all levels and styles.
-            Whether you're a seasoned competitor or stepping onto the competition floor for the first time,
-            this is your chance to shine. Compete in various categories, get judged by world-class professionals,
-            and win amazing prizes.
-          </p>
-        </div>
-      </section>
-      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-video">
+      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6" data-testid="section-competition-video">
         <div className="mb-8 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">by Karen & Ricardo</h2>
           <p className="mt-2 text-muted-foreground">EL MUNDIAL 2026</p>
