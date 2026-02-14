@@ -293,7 +293,7 @@ const djs: PersonData[] = [
 
 const mcs: PersonData[] = [
   { name: "Kiki Kakoullis", role: "MC", country: "Greece", image: imgKikiKakoullis },
-  { name: "DJ Mauri MC", role: "MC", country: "Chile / Greece", image: imgDjMauri },
+  { name: "DJ Mauri", role: "MC", country: "Chile / Greece", image: imgDjMauri },
 ];
 
 const videographers: PersonData[] = [
