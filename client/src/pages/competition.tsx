@@ -301,7 +301,6 @@ export default function Competition() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
-
       <section
         className="relative flex min-h-[50vh] items-center justify-center overflow-hidden pt-20"
         data-testid="section-competition-hero"
@@ -329,7 +328,6 @@ export default function Competition() {
           </p>
         </div>
       </section>
-
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6" data-testid="section-competition-about">
         <div className="mb-8 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -343,12 +341,9 @@ export default function Competition() {
           </p>
         </div>
       </section>
-
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-video">
         <div className="mb-8 text-center">
-          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-            Watch the Action
-          </h2>
+          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">by Karen & Ricardo</h2>
           <p className="mt-2 text-muted-foreground">
             Get a taste of the competition energy
           </p>
@@ -364,7 +359,6 @@ export default function Competition() {
           />
         </div>
       </section>
-
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-rules">
         <div className="mb-8 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -399,7 +393,6 @@ export default function Competition() {
           ))}
         </div>
       </section>
-
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
         <div className="text-center" data-testid="section-competition-cta">
           <p className="text-lg text-muted-foreground">
@@ -418,7 +411,6 @@ export default function Competition() {
           </a>
         </div>
       </section>
-
       <footer className="border-t border-border/70 bg-card/30" data-testid="section-footer">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
           <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
@@ -454,7 +446,6 @@ export default function Competition() {
           </div>
         </div>
       </footer>
-
       {activePdf && (
         <PdfModal doc={activePdf} onClose={() => setActivePdf(null)} />
       )}
