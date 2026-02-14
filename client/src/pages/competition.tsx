@@ -344,6 +344,27 @@ export default function Competition() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-video">
+        <div className="mb-8 text-center">
+          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            Watch the Action
+          </h2>
+          <p className="mt-2 text-muted-foreground">
+            Get a taste of the competition energy
+          </p>
+        </div>
+        <div className="relative w-full overflow-hidden rounded-2xl border border-border/70" style={{ paddingTop: "56.25%" }} data-testid="video-competition">
+          <iframe
+            className="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/WFRqV3ro49U"
+            title="Competition Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6" data-testid="section-competition-rules">
         <div className="mb-8 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
