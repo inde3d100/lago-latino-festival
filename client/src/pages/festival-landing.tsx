@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-background-new.jpg";
 import heroVideo from "@assets/lago-latino-trailer-web_1771240662943.mp4";
+import heroVideoMobile from "@assets/lago-latino-reel-web.mp4";
 import fullPoster from "@assets/poster-up-new.jpg";
 import navLogo from "@assets/logo-new.jpg";
 
@@ -274,14 +275,14 @@ function Nav() {
 function PosterBackdrop() {
   return (
     <div aria-hidden className="absolute inset-0 overflow-hidden">
-      <div
-        className="absolute inset-0 h-full w-full md:hidden"
-        style={{
-          backgroundImage: `url(${heroPoster})`,
-          backgroundPosition: "center top",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      <video
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
+        src={heroVideoMobile}
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={heroPoster}
       />
       <video
         className="absolute inset-0 h-full w-full object-cover hidden md:block"
