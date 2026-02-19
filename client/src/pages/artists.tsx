@@ -60,6 +60,8 @@ import imgDjMauri from "@assets/dj-mauri.jpg";
 import imgDjNicosK from "@assets/dj-nicos-k.jpg";
 import imgDjZander from "@assets/dj-zander.jpg";
 import imgDjJuan from "@assets/dj-juan.jpg";
+import imgDjThePatrick from "@assets/DJ_ThePatrick_(Austria)_1771485837274.jpg";
+import imgDjYiotaNezi from "@assets/DJ_Yiota_Nezi_(Greece)_1771485837273.jpg";
 import imgFanisTsekos from "@assets/fanis-tsekos.png";
 import imgVintziTv from "@assets/vintzi-tv.png";
 import imgNtinosChrisa from "@assets/WhatsApp_Image_2026-02-12_at_13.21.38_1770969052101.jpeg";
@@ -287,6 +289,8 @@ const djs: PersonData[] = [
   { name: "DJ Nicos K", role: "DJ", country: "Greece", image: imgDjNicosK },
   { name: "DJ Zander", role: "DJ", country: "Greece", image: imgDjZander },
   { name: "DJ Juan", role: "DJ", country: "Greece", image: imgDjJuan },
+  { name: "DJ ThePatrick", role: "DJ", country: "Austria", image: imgDjThePatrick },
+  { name: "DJ Yiota Nezi", role: "DJ", country: "Greece", image: imgDjYiotaNezi },
 ];
 
 const mcs: PersonData[] = [
