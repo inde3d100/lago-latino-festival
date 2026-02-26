@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -19,7 +19,6 @@ import {
   Menu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import heroPoster from "@assets/poster-background-new.jpg";
@@ -27,6 +26,9 @@ import heroVideo from "@assets/lago-latino-trailer-web_1771240662943.mp4";
 import heroVideoMobile from "@assets/lago-latino-reel-web.mp4";
 import fullPoster from "@assets/poster-up-new.jpg";
 import navLogo from "@assets/logo-new.jpg";
+import scheduleFriday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_FRIDAY_1772101226904.jpg";
+import scheduleSaturday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SATURDAY_1772101226905.jpg";
+import scheduleSunday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SUNDAY_1772101226905.jpg";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -609,57 +611,9 @@ export default function FestivalLanding() {
         label="Schedule"
         eyebrow="Three nights"
         title="Schedule"
-        description="A clean, dancer-friendly flow — workshops by day, socials by night. (Placeholder timing)"
+        description="A clean, dancer-friendly flow — workshops by day, socials by night."
       >
-        <Tabs defaultValue="fri" className="w-full" data-testid="tabs-schedule">
-          <TabsList className="w-full justify-start rounded-2xl bg-card/50 p-1" data-testid="tabslist-schedule">
-            <TabsTrigger value="fri" className="rounded-xl" data-testid="tab-fri">
-              Fri
-            </TabsTrigger>
-            <TabsTrigger value="sat" className="rounded-xl" data-testid="tab-sat">
-              Sat
-            </TabsTrigger>
-            <TabsTrigger value="sun" className="rounded-xl" data-testid="tab-sun">
-              Sun
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="fri" className="mt-6" data-testid="panel-fri">
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
-              <h3 className="font-display text-2xl font-semibold text-foreground">
-                Schedule Coming Soon
-              </h3>
-              <p className="mt-2 max-w-md text-muted-foreground">
-                Stay tuned — full workshop and party schedule will be announced shortly.
-              </p>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="sat" className="mt-6" data-testid="panel-sat">
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
-              <h3 className="font-display text-2xl font-semibold text-foreground">
-                Schedule Coming Soon
-              </h3>
-              <p className="mt-2 max-w-md text-muted-foreground">
-                Stay tuned — full workshop and party schedule will be announced shortly.
-              </p>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="sun" className="mt-6" data-testid="panel-sun">
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <CalendarDays className="mb-4 h-12 w-12 text-[hsl(var(--primary)/0.6)]" />
-              <h3 className="font-display text-2xl font-semibold text-foreground">
-                Schedule Coming Soon
-              </h3>
-              <p className="mt-2 max-w-md text-muted-foreground">
-                Stay tuned — full workshop and party schedule will be announced shortly.
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
+        <ScheduleDays />
       </Section>
       {/* VENUE */}
       <Section
@@ -907,6 +861,113 @@ export default function FestivalLanding() {
         </div>
       </footer>
     </div>
+  );
+}
+
+const scheduleData = [
+  { key: "fri", label: "Friday", date: "March 13th", image: scheduleFriday },
+  { key: "sat", label: "Saturday", date: "March 14th", image: scheduleSaturday },
+  { key: "sun", label: "Sunday", date: "March 15th", image: scheduleSunday },
+] as const;
+
+function ScheduleDays() {
+  const [openDay, setOpenDay] = useState<string | null>(null);
+  const [imgError, setImgError] = useState<Record<string, boolean>>({});
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (!openDay) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenDay(null);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    requestAnimationFrame(() => closeRef.current?.focus());
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+      triggerRef.current?.focus();
+    };
+  }, [openDay]);
+
+  const activeDay = scheduleData.find((d) => d.key === openDay);
+
+  return (
+    <>
+      <div className="grid grid-cols-3 gap-3 sm:gap-4" data-testid="schedule-day-buttons">
+        {scheduleData.map((day) => (
+          <button
+            key={day.key}
+            onClick={(e) => {
+              triggerRef.current = e.currentTarget;
+              setOpenDay(day.key);
+            }}
+            className={cn(
+              "group relative flex flex-col items-center gap-1 rounded-2xl border border-white/10 bg-card/50 px-4 py-6 sm:py-8 transition-all",
+              "hover:border-[hsl(var(--primary)/0.5)] hover:bg-card/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]",
+            )}
+            data-testid={`btn-schedule-${day.key}`}
+            aria-label={`View ${day.label} schedule`}
+          >
+            <CalendarDays className="mb-2 h-8 w-8 text-[hsl(var(--primary)/0.7)] transition group-hover:text-[hsl(var(--primary))]" />
+            <span className="font-display text-lg font-semibold text-foreground sm:text-xl">
+              {day.label}
+            </span>
+            <span className="text-xs text-muted-foreground sm:text-sm">{day.date}</span>
+            <span className="mt-2 text-xs text-[hsl(var(--primary)/0.8)] opacity-0 transition group-hover:opacity-100">
+              Tap to view
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {openDay && activeDay && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setOpenDay(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${activeDay.label} schedule`}
+          data-testid={`schedule-modal-${openDay}`}
+        >
+          <div
+            className="relative mx-auto flex max-h-[90vh] max-w-[95vw] flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-3 flex w-full items-center justify-between px-1">
+              <h3 className="font-display text-lg font-semibold text-white sm:text-xl">
+                {activeDay.label} — {activeDay.date}
+              </h3>
+              <button
+                ref={closeRef}
+                onClick={() => setOpenDay(null)}
+                className="grid h-9 w-9 place-items-center rounded-full bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]"
+                aria-label="Close schedule modal"
+                data-testid="btn-close-schedule-modal"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {imgError[openDay] ? (
+              <div className="flex h-64 w-full items-center justify-center rounded-xl bg-card/60 text-muted-foreground">
+                Schedule image coming soon.
+              </div>
+            ) : (
+              <img
+                src={activeDay.image}
+                alt={`${activeDay.label} workshop schedule`}
+                className="rounded-xl object-contain"
+                style={{ maxHeight: "80vh", maxWidth: "95vw" }}
+                onError={() => setImgError((prev) => ({ ...prev, [openDay]: true }))}
+                data-testid={`img-schedule-${openDay}`}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
