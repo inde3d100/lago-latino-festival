@@ -26,9 +26,9 @@ import heroVideo from "@assets/lago-latino-trailer-web_1771240662943.mp4";
 import heroVideoMobile from "@assets/lago-latino-reel-web.mp4";
 import fullPoster from "@assets/poster-up-new.jpg";
 import navLogo from "@assets/logo-new.jpg";
-import scheduleFriday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_FRIDAY_1772101226904.jpg";
-import scheduleSaturday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SATURDAY_1772101226905.jpg";
-import scheduleSunday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SUNDAY_1772101226905.jpg";
+import scheduleFriday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_FRIDAY-01_1772708464831.png";
+import scheduleSaturday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SATURDAY-01_1772708464831.png";
+import scheduleSunday from "@assets/LAGO_FEST_SCEDULE_-_INSTA_POST_SUNDAY-01_1772708464832.png";
 
 function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement | null>(null);
