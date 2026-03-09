@@ -737,45 +737,31 @@ export default function FestivalLanding() {
         title="Tickets"
         description="Pick the pass that fits your weekend — from party-only to the full experience."
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <TicketCard
             title="Full Pass"
-            price="€119"
+            price="€129"
             highlight={true}
             bullets={["Full weekend access", "All workshops + socials", "All parties included"]}
             testid="card-ticket-full"
           />
           <TicketCard
-            title="Bootcamp (Salsa Ladies) + Full Pass"
-            price="€174"
-            highlight={false}
-            bullets={["Salsa Ladies Bootcamp with Kelly", "Full weekend access included", "Workshops + socials + parties"]}
-            testid="card-ticket-bootcamp-salsa-full"
-          />
-          <TicketCard
             title="Party Pass"
-            price="€60"
+            price="€65"
             highlight={false}
             bullets={["Social dancing & parties only", "No workshops included", "All 3 nights of parties"]}
             testid="card-ticket-party"
           />
           <TicketCard
-            title="Bootcamp (Salsa Ladies with Kelly)"
-            price="€55"
+            title="Bootcamp (Salsa Ladies) + Full Pass"
+            price="€184"
             highlight={false}
-            bullets={["Salsa Ladies Bootcamp only", "Intensive training with Kelly", "Bootcamp access only"]}
-            testid="card-ticket-bootcamp-salsa"
-          />
-          <TicketCard
-            title="Bootcamp (Bachata Couples with Nestoras & Natali)"
-            price="€55"
-            highlight={false}
-            bullets={["Bachata Couples Bootcamp only", "With Nestoras & Natali", "Bootcamp access only"]}
-            testid="card-ticket-bootcamp-bachata"
+            bullets={["Salsa Ladies Bootcamp with Kelly", "Full weekend access included", "Workshops + socials + parties"]}
+            testid="card-ticket-bootcamp-salsa-full"
           />
           <TicketCard
             title="Bootcamp (Bachata Couples) + Full Pass"
-            price="€174"
+            price="€184"
             highlight={false}
             bullets={["Bachata Couples Bootcamp with Nestoras & Natali", "Full weekend access included", "Workshops + socials + parties"]}
             testid="card-ticket-bootcamp-bachata-full"
