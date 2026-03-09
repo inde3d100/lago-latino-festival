@@ -633,10 +633,7 @@ export default function FestivalLanding() {
               <h3 className="font-display text-2xl tracking-tight" data-testid="text-venue-title">
                 Two rooms. One heartbeat.
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground" data-testid="text-venue-desc">
-                Enjoy 850m² + 350m² ballrooms, smooth floors, and a layout that keeps the energy
-                flowing. Step outside to lakeside air, or reset in the spa before the next set.
-              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground" data-testid="text-venue-desc">Enjoy 850m² + 350m² ballrooms, smooth floors, and a layout that keeps the energy flowing. Got tired? Reset in the spa before the next set.</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-border/70 bg-white/5 p-4" data-testid="stat-venue-halls">
                   <div className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
