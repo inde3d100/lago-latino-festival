@@ -667,7 +667,7 @@ export default function FestivalLanding() {
             </div>
             <div className="p-4">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14028.16362916453!2d20.841077587405266!3d39.65951574270266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135be9ca7232227f%3A0xbb3fe03c009d5e60!2sEpirus%20Palace%20Congress!5e0!3m2!1sen!2sgr!4v1770971099144!5m2!1sen!2sgr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7566163591628!2d20.861861399999995!3d39.587635299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135be8e3217dad19%3A0x62de9fa28cf70866!2sEpirus%20Palace%20Hotel%20Congress%20%26%20Spa!5e0!3m2!1sen!2sgr!4v1773041003764!5m2!1sen!2sgr"
                 className="w-full rounded-2xl"
                 style={{ height: "400px", border: 0 }}
                 allowFullScreen
