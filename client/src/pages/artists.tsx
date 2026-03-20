@@ -12,61 +12,61 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import heroPoster from "@assets/poster-square.jpg";
-import imgKarenRicardo from "@assets/karen-ricardo.jpg";
-import imgJhoanaPalhua from "@assets/jhoana-palhua.jpeg";
-import imgDiagoCamilo from "@assets/diago-camilo.jpeg";
-import imgYuriColucci from "@assets/yuri-colucci.jpeg";
-import imgDavidAylin from "@assets/david-aylin.jpg";
-import imgGabrieleNicole from "@assets/gabriele-nicole.jpg";
-import imgRitaLorenzo from "@assets/rita-lorenzo.png";
-import imgDanieleBorelli from "@assets/daniele-borelli.jpeg";
-import imgByronLozano from "@assets/byron-lozano.jpg";
-import imgEdsonJuan from "@assets/edson-juan.png";
-import imgStellaPetrarca from "@assets/stella-petrarca.jpeg";
-import imgJohnKelly from "@assets/john-kelly.png";
-import imgGiorgosElena from "@assets/giorgos-elena.jpeg";
-import imgPanagiotisChristina from "@assets/panagiotis-christina.png";
-import imgTeoMarianna from "@assets/teo-marianna.jpeg";
-import imgChrysaDami from "@assets/chrysa-dami.jpeg";
-import imgMargaritaSkarlea from "@assets/margarita-skarlea.jpeg";
-import imgDio from "@assets/dio.jpeg";
-import imgKonstantinosKaterina from "@assets/konstantinos-katerina.jpeg";
-import imgGiorgosEvgenia from "@assets/giorgos-evgenia.jpeg";
-import imgStavrosKatherine from "@assets/stavros-katherine.jpeg";
-import imgNestorasNatali from "@assets/nestoras-natali.png";
-import imgVasilisAlexandra from "@assets/vasilis-alexandra.jpeg";
-import imgVasilisGiotsis from "@assets/vasilis-giotsis.jpeg";
-import imgSteliosKonstantina from "@assets/stelios-konstantina.png";
-import imgKonstantinosAnna from "@assets/konstantinos-anna.jpeg";
-import imgManosLydia from "@assets/manos-lydia.jpeg";
-import imgEmmanouelajSmyrnaiou from "@assets/emmanouela-smyrnaiou.jpeg";
-import imgAntonisChara from "@assets/antonis-chara.jpg";
-import imgKikoMagda from "@assets/kiko-magda.png";
-import imgKikiKakoullis from "@assets/kiki-kakoullis.jpeg";
-import imgSofiaSpyropoulou from "@assets/sofia-spyropoulou.jpeg";
-import imgNatashaChuma from "@assets/natasha-chuma.jpg";
-import imgAnnaPolyzou from "@assets/anna-polyzou.jpeg";
-import imgAlisaAntonova from "@assets/alisa-antonova.jpeg";
-import imgPolinaRoula from "@assets/polina-roula.jpg";
-import imgTinaMpantzi from "@assets/tina-mpantzi.jpg";
-import imgGiorgosDervos from "@assets/giorgos-dervos.jpeg";
-import imgDoraBarkouzou from "@assets/dora-barkouzou.jpeg";
-import imgTolisNatali from "@assets/tolis-natali.jpg";
-import imgLydiaLagou from "@assets/lydia-lagou.jpeg";
-import imgSuertoRicoMantha from "@assets/suerto-rico-mantha.jpg";
-import imgDjFabrizioZoro from "@assets/dj-fabrizio-zoro.jpg";
-import imgDjMauri from "@assets/dj-mauri.jpg";
-import imgDjNicosK from "@assets/dj-nicos-k.jpg";
-import imgDjZander from "@assets/dj-zander.jpg";
-import imgDjJuan from "@assets/dj-juan.jpg";
-import imgDjThePatrick from "@assets/DJ_ThePatrick_(Austria)_1771485837274.jpg";
-import imgDjYiotaNezi from "@assets/DJ_Yiota_Nezi_(Greece)_1771485837273.jpg";
-import imgFanisTsekos from "@assets/fanis-tsekos.png";
-import imgVintziTv from "@assets/vintzi-tv.png";
-import imgNtinosChrisa from "@assets/WhatsApp_Image_2026-02-12_at_13.21.38_1770969052101.jpeg";
-import imgKorinaVisvardi from "@assets/WhatsApp_Image_2026-02-12_at_13.21.19_1770969088049.jpeg";
-import navLogo from "@assets/logo-new.jpg";
+import heroPoster from "@assets/optimized/poster-square.webp";
+import imgKarenRicardo from "@assets/optimized/karen-ricardo.webp";
+import imgJhoanaPalhua from "@assets/optimized/jhoana-palhua.webp";
+import imgDiagoCamilo from "@assets/optimized/diago-camilo.webp";
+import imgYuriColucci from "@assets/optimized/yuri-colucci.webp";
+import imgDavidAylin from "@assets/optimized/david-aylin.webp";
+import imgGabrieleNicole from "@assets/optimized/gabriele-nicole.webp";
+import imgRitaLorenzo from "@assets/optimized/rita-lorenzo.webp";
+import imgDanieleBorelli from "@assets/optimized/daniele-borelli.webp";
+import imgByronLozano from "@assets/optimized/byron-lozano.webp";
+import imgEdsonJuan from "@assets/optimized/edson-juan.webp";
+import imgStellaPetrarca from "@assets/optimized/stella-petrarca.webp";
+import imgJohnKelly from "@assets/optimized/john-kelly.webp";
+import imgGiorgosElena from "@assets/optimized/giorgos-elena.webp";
+import imgPanagiotisChristina from "@assets/optimized/panagiotis-christina.webp";
+import imgTeoMarianna from "@assets/optimized/teo-marianna.webp";
+import imgChrysaDami from "@assets/optimized/chrysa-dami.webp";
+import imgMargaritaSkarlea from "@assets/optimized/margarita-skarlea.webp";
+import imgDio from "@assets/optimized/dio.webp";
+import imgKonstantinosKaterina from "@assets/optimized/konstantinos-katerina.webp";
+import imgGiorgosEvgenia from "@assets/optimized/giorgos-evgenia.webp";
+import imgStavrosKatherine from "@assets/optimized/stavros-katherine.webp";
+import imgNestorasNatali from "@assets/optimized/nestoras-natali.webp";
+import imgVasilisAlexandra from "@assets/optimized/vasilis-alexandra.webp";
+import imgVasilisGiotsis from "@assets/optimized/vasilis-giotsis.webp";
+import imgSteliosKonstantina from "@assets/optimized/stelios-konstantina.webp";
+import imgKonstantinosAnna from "@assets/optimized/konstantinos-anna.webp";
+import imgManosLydia from "@assets/optimized/manos-lydia.webp";
+import imgEmmanouelajSmyrnaiou from "@assets/optimized/emmanouela-smyrnaiou.webp";
+import imgAntonisChara from "@assets/optimized/antonis-chara.webp";
+import imgKikoMagda from "@assets/optimized/kiko-magda.webp";
+import imgKikiKakoullis from "@assets/optimized/kiki-kakoullis.webp";
+import imgSofiaSpyropoulou from "@assets/optimized/sofia-spyropoulou.webp";
+import imgNatashaChuma from "@assets/optimized/natasha-chuma.webp";
+import imgAnnaPolyzou from "@assets/optimized/anna-polyzou.webp";
+import imgAlisaAntonova from "@assets/optimized/alisa-antonova.webp";
+import imgPolinaRoula from "@assets/optimized/polina-roula.webp";
+import imgTinaMpantzi from "@assets/optimized/tina-mpantzi.webp";
+import imgGiorgosDervos from "@assets/optimized/giorgos-dervos.webp";
+import imgDoraBarkouzou from "@assets/optimized/dora-barkouzou.webp";
+import imgTolisNatali from "@assets/optimized/tolis-natali.webp";
+import imgLydiaLagou from "@assets/optimized/lydia-lagou.webp";
+import imgSuertoRicoMantha from "@assets/optimized/suerto-rico-mantha.webp";
+import imgDjFabrizioZoro from "@assets/optimized/dj-fabrizio-zoro.webp";
+import imgDjMauri from "@assets/optimized/dj-mauri.webp";
+import imgDjNicosK from "@assets/optimized/dj-nicos-k.webp";
+import imgDjZander from "@assets/optimized/dj-zander.webp";
+import imgDjJuan from "@assets/optimized/dj-juan.webp";
+import imgDjThePatrick from "@assets/optimized/DJ_ThePatrick_(Austria)_1771485837274.webp";
+import imgDjYiotaNezi from "@assets/optimized/DJ_Yiota_Nezi_(Greece)_1771485837273.webp";
+import imgFanisTsekos from "@assets/optimized/fanis-tsekos.webp";
+import imgVintziTv from "@assets/optimized/vintzi-tv.webp";
+import imgNtinosChrisa from "@assets/optimized/WhatsApp_Image_2026-02-12_at_13.21.38_1770969052101.webp";
+import imgKorinaVisvardi from "@assets/optimized/WhatsApp_Image_2026-02-12_at_13.21.19_1770969088049.webp";
+import navLogo from "@assets/optimized/logo-new.webp";
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -324,6 +324,9 @@ function PersonCard({
             alt={person.name} 
             className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: person.imagePosition || "50% 20%" }}
+            loading="lazy"
+            decoding="async"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           />
         ) : (
           <>
