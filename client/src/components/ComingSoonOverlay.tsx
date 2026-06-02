@@ -11,8 +11,8 @@ export default function ComingSoonOverlay({ children }: Props) {
       <div className="pointer-events-none select-none blur-[6px] brightness-50">
         {children}
       </div>
-      {/* Overlay */}
-      <div className="absolute inset-0 z-50 flex items-center justify-center">
+      {/* Overlay — positioned at hero (top of page) */}
+      <div className="absolute inset-0 z-50 flex items-start justify-center pt-[25vh]">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
