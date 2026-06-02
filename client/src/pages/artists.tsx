@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
+import ComingSoonOverlay from "@/components/ComingSoonOverlay";
 import {
   Sparkles,
   Ticket,
@@ -402,6 +403,7 @@ function SocialButton({
 
 export default function Artists() {
   return (
+    <ComingSoonOverlay>
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
 
@@ -555,5 +557,6 @@ export default function Artists() {
         </div>
       </footer>
     </div>
+    </ComingSoonOverlay>
   );
 }

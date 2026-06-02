@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { motion, useReducedMotion } from "framer-motion";
+import ComingSoonOverlay from "@/components/ComingSoonOverlay";
 import {
   CalendarDays,
   Compass,
@@ -380,6 +381,7 @@ export default function FestivalLanding() {
   }, [lightboxOpen]);
 
   return (
+    <ComingSoonOverlay>
     <div id="top" className="min-h-screen bg-background text-foreground">
       <Nav />
       {/* HERO */}
@@ -844,6 +846,7 @@ export default function FestivalLanding() {
         </div>
       </footer>
     </div>
+    </ComingSoonOverlay>
   );
 }
 

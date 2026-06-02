@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
+import ComingSoonOverlay from "@/components/ComingSoonOverlay";
 import {
   Ticket,
   Instagram,
@@ -299,6 +300,7 @@ export default function Competition() {
   const [activePdf, setActivePdf] = useState<PdfDocument | null>(null);
 
   return (
+    <ComingSoonOverlay>
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <section
@@ -435,5 +437,6 @@ export default function Competition() {
         <PdfModal doc={activePdf} onClose={() => setActivePdf(null)} />
       )}
     </div>
+    </ComingSoonOverlay>
   );
 }
